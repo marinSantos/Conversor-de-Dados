@@ -1,10 +1,12 @@
-let dado = prompt('Que tipo de dado deseja converter ? \n1-Byte (8 bits) \n2-Kilobyte (KB) \n 3-Megabyte (MB) \n 4-Gigabyte (GB) \n 5-Terabyte (TB) \n 6-Petabyte(PB) \n 7-Exabyte \n 8-Zettabyte \n 9-Yottabyte')
+
+
+let dado = prompt('Que tipo de dado deseja converter ? \n1-Byte (8 bits) \n2-Kilobyte (KB) \n 3-Megabyte (MB) \n 4-Gigabyte (GB) \n 5-Terabyte (TB) \n 6-Petabyte(PB) \n 7-Exabyte (EB) \n 8-Zettabyte (ZB) \n 9-Yottabyte (YB) \n 0-Sair')
 
 let numero = prompt('Qual o valor do tipo de dado que você deseja converter ? : ')
 
 
 
-let dadoConvertido = prompt('Por qual tipo de dado você deseja converter ? \n 1-Byte (8 bits) \n2-Kilobyte (KB) \n 3-Megabyte (MB) \n 4-Gigabyte (GB) \n 5-Terabyte (TB) \n 6-Petabyte(PB) \n 7-Exabyte \n 8-Zettabyte \n 9-Yottabyte')
+let dadoConvertido = prompt('Por qual tipo de dado você deseja converter ? \n 1-Byte (8 bits) \n2-Kilobyte (KB) \n 3-Megabyte (MB) \n 4-Gigabyte (GB) \n 5-Terabyte (TB) \n 6-Petabyte(PB) \n 7-Exabyte (EB) \n 8-Zettabyte (ZB) \n 9-Yottabyte (YB) ')
 
 let tipoDeDado
 let tipoDeDadoConvertido
@@ -84,6 +86,7 @@ if (dado == 1) {
             } else { resultado }
             break
         default: tipoDeDadoConvertido = 'Não informado'
+        alert('Saindo do programa...')
             tipoDeDado = ' Bytes'
             break
     }
@@ -163,6 +166,7 @@ else if (dado == 2) {
             } else { resultado }
             break
         default: tipoDeDadoConvertido = 'Não informado'
+        alert('Saindo do programa...')
             tipoDeDado = ' KiloBytes'
             break
     }
@@ -241,6 +245,7 @@ else if (dado == 3) {
             } else { resultado }
             break
         default: tipoDeDadoConvertido = 'Não informado'
+        alert('Saindo do programa...')
             tipoDeDado = ' MegaBytes'
             break
     }
@@ -319,6 +324,7 @@ else if (dado == 4) {
             } else { resultado }
             break
         default: tipoDeDado = 'Não informado'
+        alert('Saindo do programa...')
             tipoDeDado = ' GigaBytes'
             break
     }
@@ -398,6 +404,7 @@ else if (dado == 5) {
             } else { resultado }
             break
         default: tipoDeDadoConvertido = 'Não informado'
+        alert('Saindo do programa...')
             break
     }
 }
@@ -488,6 +495,7 @@ else if (dado == 6) {
             else { resultado }
             break
         default: tipoDeDadoConvertido = 'Não informado'
+        alert('Saindo do programa...')
             break
     }
 }
@@ -578,6 +586,7 @@ else if (dado == 7) {
             else { resultado }
             break
         default: tipoDeDadoConvertido = 'Não informado'
+        alert('Saindo do programa...')
             break
     }
 }
@@ -668,6 +677,7 @@ else if (dado == 8) {
             else { resultado }
             break
         default: tipoDeDadoConvertido = 'Não informado'
+        alert('Saindo do programa...')
             break
     }
 }
@@ -758,6 +768,7 @@ else if (dado == 9) {
             resultado = numero
             break
         default: tipoDeDadoConvertido = 'Não informado'
+        alert('Saindo do programa...')
             break
     }
 
@@ -766,4 +777,7 @@ else if (dado == 9) {
 else { resultado = 'Nenhum valor digitado' }
 
 alert('Valor e tipo de dado a converter:' + numero + tipoDeDado + '\nValor e tipo de dado convertido: ' + resultado + tipoDeDadoConvertido)
+
+
+
 
