@@ -2,13 +2,12 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Ubuntu", sans-serif;
+    
 }
 body{
-    
     text-align: center;
-    background-image:url(Imagens/bec156_35ed5bf2b1284bcda0bb7f27e5f01bca_mv2.webp) ;
-   background-size:cover ;
+    background-color:#01092B ;
+    font-family: "Ubuntu", sans-serif;
 }
 main{
     background-color:#095DA6;
