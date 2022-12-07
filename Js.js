@@ -1,783 +1,660 @@
+const convert = document.getElementById('convertLabel')
+const input = document.getElementById('number')
+const inputResult = document.getElementById('result')
+const main = document.querySelector('main')
+let dadoConverter = ''
+let dadoConvertido = ''
+const converter = document.querySelectorAll('.converter')
+const convertido = document.querySelectorAll('.convertido')
 
 
-let dado = prompt('Que tipo de dado deseja converter ? \n1-Byte (8 bits) \n2-Kilobyte (KB) \n 3-Megabyte (MB) \n 4-Gigabyte (GB) \n 5-Terabyte (TB) \n 6-Petabyte(PB) \n 7-Exabyte (EB) \n 8-Zettabyte (ZB) \n 9-Yottabyte (YB) \n 0-Sair')
-
-let numero = prompt('Qual o valor do tipo de dado que você deseja converter ? : ')
-
-
-
-let dadoConvertido = prompt('Por qual tipo de dado você deseja converter ? \n 1-Byte (8 bits) \n2-Kilobyte (KB) \n 3-Megabyte (MB) \n 4-Gigabyte (GB) \n 5-Terabyte (TB) \n 6-Petabyte(PB) \n 7-Exabyte (EB) \n 8-Zettabyte (ZB) \n 9-Yottabyte (YB) ')
-
-let tipoDeDado
-let tipoDeDadoConvertido
-let resultado
-
-
-if (dado == 1) {
-    switch (dadoConvertido) {
-        case '1': tipoDeDadoConvertido = ' Bytes'
-            tipoDeDado = ' Bytes'
-            resultado = numero
-            break
-        case '2': tipoDeDadoConvertido = ' KiloBytes'
-            tipoDeDado = ' Bytes'
-            if (numero < 1024) {
-                resultado = 1 / numero
-            } else if (numero >= 1024) {
-                resultado = numero / 1024
-            } else { resultado }
-            break
-
-        case '3': tipoDeDadoConvertido = ' MegaBytes'
-            tipoDeDado = ' Bytes'
-            if (numero < 1024 * 1024) {
-                resultado = 1 / numero
-            } else if (numero >= 1024 * 1024) {
-                resultado = numero / Math.pow(1024, 2)
-            } else { resultado }
-            break
-
-        case '4': tipoDeDadoConvertido = ' GigaBytes'
-            tipoDeDado = ' Bytes'
-            if (numero < 1024 * 1024 * 1024) {
-                resultado = 1 / numero
-            } else if (numero >= 1024 * 1024 * 1024) {
-                resultado = numero / Math.pow(1024, 3)
-            } else { resultado }
-            break
-        case '5': tipoDeDadoConvertido = ' TeraBytes'
-            tipoDeDado = ' Bytes'
-            if (numero < Math.pow(1024, 4)) {
-                resultado = 1 / numero
-            } else if (numero >= Math.pow(1024, 4)) {
-                resultado = numero / Math.pow(1024, 4)
-            } else { resultado }
-            break
-        case '6': tipoDeDadoConvertido = ' PetaBytes'
-            tipoDeDado = ' Bytes'
-            if (numero < Math.pow(1024, 5)) {
-                resultado = 1 / numero
-            } else if (numero >= Math.pow(1024, 5)) {
-                numero / Math.pow(1024, 5)
-            } else { resultado }
-            break
-        case '7': tipoDeDadoConvertido = ' ExaBytes'
-            tipoDeDado = ' Bytes'
-            if (numero < Math.pow(1024, 6)) {
-                resultado = 1 / numero
-            } else if (numero >= Math.pow(1024, 6)) {
-                numero / Math.pow(1024, 6)
-            } else { resultado }
-            break
-        case '8': tipoDeDadoConvertido = ' ZettaBytes'
-            tipoDeDado = ' Bytes'
-            if (numero < Math.pow(1024, 7)) {
-                resultado = 1 / numero
-            } else if (numero >= Math.pow(1024, 7)) {
-                numero / Math.pow(1024, 7)
-            } else { resultado }
-            break
-        case '9': tipoDeDadoConvertido = ' YottaBytes'
-            tipoDeDado = ' Bytes'
-            if (numero < Math.pow(1024, 8)) {
-                resultado = 1 / numero
-            } else if (numero >= Math.pow(1024, 8)) {
-                numero / Math.pow(1024, 8)
-            } else { resultado }
-            break
-        default: tipoDeDadoConvertido = 'Não informado'
-        alert('Saindo do programa...')
-            tipoDeDado = ' Bytes'
-            break
+document.getElementById('convert').addEventListener('click', function (ev) {
+    ev.preventDefault()
+    const numero = input.value
+    
+    //Byte
+    if (dadoConverter === 'Byte' && dadoConvertido === 'Byte') {
+        inputResult.value = numero + ' ' + dadoConvertido+"'s'"
     }
-}
-else if (dado == 2) {
-    switch (dadoConvertido) {
-        case '1': tipoDeDadoConvertido = 'Bytes'
-            tipoDeDado = ' KiloBytes'
-            if (numero <= 1) {
-                resultado = 1024
-            }
-            else if (numero > 1) {
-                resultado = numero * 1024
-            } else { resultado }
-            break
-        case '2': tipoDeDadoConvertido = ' KiloBytes'
-            tipoDeDado = ' KiloBytes'
-            resultado = numero
-            break
-
-        case '3': tipoDeDadoConvertido = ' MegaBytes'
-            tipoDeDado = ' KiloBytes'
-            if (numero < 1024) {
-                resultado = 1 / numero
-            } else if (numero >= 1024) {
-                resultado = numero / 1024
-            } else { resultado }
-            break
-
-        case '4': tipoDeDadoConvertido = ' GigaBytes'
-            tipoDeDado = ' KiloBytes'
-            if (numero < Math.pow(1024, 2)) {
-                resultado = 1 / numero
-            } else if (numero >= Math.pow(1024, 2)) {
-                resultado = numero / Math.pow(1024, 2)
-            } else { resultado }
-            break
-
-        case '5': tipoDeDadoConvertido = ' TeraBytes'
-            tipoDeDado = ' KiloBytes'
-            if (numero < Math.pow(1024, 3)) {
-                resultado = 1 / numero
-            } else if (numero >= Math.pow(1024, 3)) {
-                resultado = numero / Math.pow(1024, 3)
-            } else { resultado }
-            break
-        case '6': tipoDeDadoConvertido = ' PetaBytes'
-            tipoDeDado = ' KiloBytes'
-            if (numero < Math.pow(1024, 4)) {
-                resultado = 1 / numero
-            } else if (numero >= Math.pow(1024, 4)) {
-                resultado = numero / Math.pow(1024, 4)
-            } else { resultado }
-            break
-        case '7': tipoDeDadoConvertido = ' ExaBytes'
-            tipoDeDado = ' KiloBytes'
-            if (numero < Math.pow(1024, 5)) {
-                resultado = 1 / numero
-            } else if (numero >= Math.pow(1024, 5)) {
-                resultado = numero / Math.pow(1024, 5)
-            } else { resultado }
-            break
-        case '8': tipoDeDadoConvertido = ' ZettaBytes'
-            tipoDeDado = ' KiloBytes'
-            if (numero < Math.pow(1024, 6)) {
-                resultado = 1 / numero
-            } else if (numero >= Math.pow(1024, 6)) {
-                resultado = numero / Math.pow(1024, 6)
-            } else { resultado }
-            break
-        case '9': tipoDeDadoConvertido = ' YottaBytes'
-            tipoDeDado = ' KiloBytes'
-            if (numero < Math.pow(1024, 7)) {
-                resultado = 1 / numero
-            } else if (numero >= Math.pow(1024, 7)) {
-                resultado = numero / Math.pow(1024, 7)
-            } else { resultado }
-            break
-        default: tipoDeDadoConvertido = 'Não informado'
-        alert('Saindo do programa...')
-            tipoDeDado = ' KiloBytes'
-            break
+    else if (dadoConverter === 'Byte' && dadoConvertido === 'KiloByte') {
+        if (input.value < 1024) {
+            inputResult.value = 1 / numero + ' ' + dadoConvertido+"'s'"
+        } else if (numero >= 1024) {
+            inputResult.value = numero / 1024 + ' ' + dadoConvertido+"'s'" 
+        } else { "Erro" }
     }
-}
-else if (dado == 3) {
-    switch (dadoConvertido) {
-        case '1': tipoDeDadoConvertido = ' Bytes'
-            tipoDeDado = ' MegaBytes'
-            if (numero <= 1) {
-                resultado = Math.pow(1024, 2)
-            } else if (numero > 1) {
-                resultado = numero * Math.pow(1024, 2)
-            } else { resultado }
-            break
-        case '2': tipoDeDadoConvertido = ' KiloBytes'
-            tipoDeDado = ' MegaBytes'
-            if (numero <= 1) {
-                resultado = 1024
-            } else if (numero > 1) {
-                resultado = numero * 1024
-            } else { resultado }
-            break
-
-        case '3': tipoDeDadoConvertido = ' MegaBytes'
-            tipoDeDado = ' MegaBytes'
-            resultado = numero
-            break
-
-        case '4': tipoDeDadoConvertido = ' GigaBytes'
-            tipoDeDado = ' MegaBytes'
-            if (numero < 1024) {
-                resultado = 1 / numero
-            } else if (numero >= 1024) {
-                resultado = numero / 1024
-            } else { resultado }
-            break
-
-        case '5': tipoDeDadoConvertido = ' TeraBytes'
-            tipoDeDado = ' MegaBytes'
-            if (numero < Math.pow(1024, 2)) {
-                resultado = 1 / numero
-            } else if (numero >= Math.pow(1024, 2)) {
-                resultado = numero / Math.pow(1024, 2)
-            } else { resultado }
-            break
-        case '6': tipoDeDadoConvertido = ' PetaBytes'
-            tipoDeDado = ' MegaBytes'
-            if (numero < Math.pow(1024, 4)) {
-                resultado = 1 / numero
-            } else if (numero >= Math.pow(1024, 4)) {
-                resultado = numero / Math.pow(1024, 4)
-            } else { resultado }
-            break
-        case '7': tipoDeDadoConvertido = ' ExaBytes'
-            tipoDeDado = ' MegaBytes'
-            if (numero < Math.pow(1024, 4)) {
-                resultado = 1 / numero
-            } else if (numero >= Math.pow(1024, 4)) {
-                resultado = numero / Math.pow(1024, 4)
-            } else { resultado }
-            break
-        case '8': tipoDeDadoConvertido = ' ZettaBytes'
-            tipoDeDado = ' MegaBytes'
-            if (numero < Math.pow(1024, 5)) {
-                resultado = 1 / numero
-            } else if (numero >= Math.pow(1024, 5)) {
-                resultado = numero / Math.pow(1024, 5)
-            } else { resultado }
-            break
-        case '9': tipoDeDadoConvertido = ' YottaBytes'
-            tipoDeDado = ' MegaBytes'
-            if (numero < Math.pow(1024, 6)) {
-                resultado = 1 / numero
-            } else if (numero >= Math.pow(1024, 6)) {
-                resultado = numero / Math.pow(1024, 6)
-            } else { resultado }
-            break
-        default: tipoDeDadoConvertido = 'Não informado'
-        alert('Saindo do programa...')
-            tipoDeDado = ' MegaBytes'
-            break
+    else if (dadoConverter === 'Byte' && dadoConvertido === 'MegaByte') {
+        if (numero < Math.pow(1024, 2)) {
+            inputResult.value = 1 / numero + ' ' + dadoConvertido+"'s'"
+        } else if (numero >= Math.pow(1024, 2)) {
+            inputResult.value = numero / Math.pow(1024, 2) + ' ' + dadoConvertido+"'s'"
+        } else { "Erro" }
     }
-}
-else if (dado == 4) {
-    switch (dadoConvertido) {
-        case '1': tipoDeDadoConvertido = ' Bytes'
-            tipoDeDado = ' GigaBytes'
-            if (numero <= 1) {
-                resultado = Math.pow(1024, 3)
-            } else if (numero > 1) {
-                resultado = numero * Math.pow(1024, 3)
-            } else { resultado }
-            break
-        case '2': tipoDeDadoConvertido = ' KiloBytes'
-            tipoDeDado = ' GigaBytes'
-            if (numero <= 1) {
-                resultado = Math.pow(1024, 2)
-            } else if (numero > 1) {
-                resultado = numero * Math.pow(1024, 2)
-            } else { resultado }
-            break
-
-        case '3': tipoDeDadoConvertido = ' MegaBytes'
-            tipoDeDado = ' GigaBytes'
-            if (numero <= 1) {
-                resultado = 1024
-            } else if (numero > 1) {
-                resultado = numero * 1024
-            } else { resultado }
-            break
-
-        case '4': tipoDeDadoConvertido = ' GigaBytes'
-            tipoDeDado = ' GigaBytes'
-            resultado = numero
-            break
-
-        case '5': tipoDeDadoConvertido = ' TeraBytes'
-            tipoDeDado = ' GigaBytes'
-            if (numero < 1024) {
-                resultado = 1 / numero
-            } else if (numero >= 1024) {
-                resultado = numero / 1024
-            } else { resultado }
-            break
-        case '6': tipoDeDadoConvertido = ' PetaBytes'
-            tipoDeDado = ' GigaBytes'
-            if (numero < Math.pow(1024, 2)) {
-                resultado = 1 / numero
-            } else if (numero >= Math.pow(1024, 2)) {
-                resultado = numero / Math.pow(1024, 2)
-            } else { resultado }
-            break
-        case '7': tipoDeDadoConvertido = ' ExaBytes'
-            tipoDeDado = ' GigaBytes'
-            if (numero < Math.pow(1024, 3)) {
-                resultado = 1 / numero
-            } else if (numero >= Math.pow(1024, 3)) {
-                resultado = numero / Math.pow(1024, 3)
-            } else { resultado }
-            break
-        case '8': tipoDeDadoConvertido = ' ZettaBytes'
-            tipoDeDado = ' GigaBytes'
-            if (numero < Math.pow(1024, 4)) {
-                resultado = 1 / numero
-            } else if (numero >= Math.pow(1024, 4)) {
-                resultado = numero / Math.pow(1024, 4)
-            } else { resultado }
-            break
-        case '9': tipoDeDadoConvertido = ' YottaBytes'
-            tipoDeDado = ' GigaBytes'
-            if (numero < Math.pow(1024, 5)) {
-                resultado = 1 / numero
-            } else if (numero >= Math.pow(1024, 5)) {
-                resultado = numero / Math.pow(1024, 5)
-            } else { resultado }
-            break
-        default: tipoDeDado = 'Não informado'
-        alert('Saindo do programa...')
-            tipoDeDado = ' GigaBytes'
-            break
+    else if (dadoConverter === 'Byte' && dadoConvertido === 'GigaByte') {
+        if (numero < Math.pow(1024, 3)) {
+            inputResult.value = 1 / numero + ' ' + dadoConvertido+"'s'"
+        } else if (numero >= Math.pow(1024, 3)) {
+            inputResult.value = numero / Math.pow(1024, 3) + ' ' + dadoConvertido+"'s'"
+        } else { "Erro" }
     }
-}
-else if (dado == 5) {
-    switch (dadoConvertido) {
-        case '1': tipoDeDadoConvertido = ' Bytes'
-            tipoDeDado = ' TeraBytes'
-            if (numero <= 1) {
-                resultado = Math.pow(1024, 4)
-            } else if (numero > 1) {
-                resultado = numero * Math.pow(1024, 4)
-            } else { resultado }
-            break
-        case '2': tipoDeDadoConvertido = ' KiloBytes'
-            tipoDeDado = ' TeraBytes'
-            if (numero <= 1) {
-                resultado = Math.pow(1024, 3)
-            } else if (numero > 1) {
-                resultado = numero * Math.pow(1024, 3)
-            } else { resultado }
-            break
+    else if (dadoConverter === 'Byte' && dadoConvertido === 'TeraByte') {
+        if (numero < Math.pow(1024, 4)) {
+            inputResult.value = 1 / numero + ' ' + dadoConvertido+"'s'"
+        } else if (numero >= Math.pow(1024, 4)) {
+            inputResult.value = numero / Math.pow(1024, 4) + ' ' + dadoConvertido+"'s'"
+        } else { "Erro" }
 
-        case '3': tipoDeDadoConvertido = ' MegaBytes'
-            tipoDeDado = ' TeraBytes'
-            if (numero <= 1) {
-                resultado = Math.pow(1024, 2)
-            } else if (numero > 1) {
-                resultado = numero * Math.pow(1024, 2)
-            } else { resultado }
-            break
-
-        case '4': tipoDeDadoConvertido = ' GigaBytes'
-            tipoDeDado = ' TeraBytes'
-            if (numero <= 1) {
-                resultado = 1024
-            } else if (numero > 1) {
-                resultado = numero * 1024
-            } else { resultado }
-            break
-
-        case '5': tipoDeDadoConvertido = ' TeraBytes'
-            tipoDeDado = ' TeraBytes'
-            resultado = numero
-
-            break
-        case '6': tipoDeDadoConvertido = ' PetaBytes'
-            tipoDeDado = ' TeraBytes'
-            if (numero < 1024) {
-                resultado = 1 / numero
-            } else if (numero >= 1024) {
-                resultado = numero / 1024
-            } else { resultado }
-            break
-        case '7': tipoDeDadoConvertido = ' ExaBytes'
-            tipoDeDado = ' TeraBytes'
-            if (numero < Math.pow(1024, 2)) {
-                resultado = 1 / numero
-            } else if (numero >= Math.pow(1024, 2)) {
-                resultado = numero / Math.pow(1024, 2)
-            } else { resultado }
-            break
-        case '8': tipoDeDadoConvertido = ' ZettaBytes'
-            tipoDeDado = ' TeraBytes'
-            if (numero < Math.pow(1024, 3)) {
-                resultado = 1 / numero
-            } else if (numero >= Math.pow(1024, 3)) {
-                resultado = numero / Math.pow(1024, 3)
-            } else { resultado }
-            break
-        case '9': tipoDeDadoConvertido = ' YottaBytes'
-            tipoDeDado = ' TeraBytes'
-            if (numero < Math.pow(1024, 4)) {
-                resultado = 1 / numero
-            } else if (numero >= Math.pow(1024, 4)) {
-                resultado = numero / Math.pow(1024, 4)
-            } else { resultado }
-            break
-        default: tipoDeDadoConvertido = 'Não informado'
-        alert('Saindo do programa...')
-            break
     }
-}
-else if (dado == 6) {
-    switch (dadoConvertido) {
-        case '1': tipoDeDadoConvertido = 'Bytes'
-            tipoDeDado = ' PetaBytes'
-            if (numero <= 1) {
-                resultado = math.pow(1024, 5)
-            }
-            else if (numero > 1) {
-                resultado = numero * math.pow(1024, 5)
-            }
-            else { resultado }
-            break
-        case '2': tipoDeDadoConvertido = 'KiloBytes'
-            tipoDeDado = ' PetaBytes'
-            if (numero <= 1) {
-                resultado = math.pow(1024, 4)
-            }
-            else if (resultado > 1) {
-                resultado = numero * math.pow(1024, 4)
-            }
-            else { resultado }
-            break
-        case '3': tipoDeDadoConvertido = ' MegaBytes'
-            tipoDeDado = ' PetaBytes'
-            if (numero <= 1) {
-                resultado = math.pow(1024, 3)
-            }
-            else if (numero > 1) {
-                resultado = numero * math.pow(1021, 3)
-            }
-            else { resultado }
-            break
-        case '4': tipoDeDadoConvertido = ' GigaBytes'
-            tipoDeDado = ' PetaBytes'
-            if (numero <= 1) {
-                resultado = math.pow(1024, 2)
-            }
-            else if (numero > 1) {
-                resultado = numero * math.pow(1024, 2)
-            }
-            else { resultado }
-            break
-        case '5': tipoDeDadoConvertido = ' TeraBytes'
-            tipoDeDado = ' PetaBytes'
-            if (numero <= 1) {
-                resultado = 1024
-            }
-            else if (numero > 1) {
-                resultado = numero * 1024
-            }
-            else { resultado }
-            break
-        case '6': tipoDeDadoConvertido = ' PetaBytes'
-            tipoDeDado = ' PetaBytes'
-            resultado = numero
-            break
-        case '7': tipoDeDadoConvertido = ' ExaBytes'
-            tipoDeDado = ' PetaBytes'
-            if (numero < 1024) {
-                resultado = 1 / numero
-            }
-            else if (numeo >= 1024) {
-                resultado = numero / 1024
-            }
-            else { resultado }
-            break
-        case '8': tipoDeDadoConvertido = ' ZettaBytes'
-            tipoDeDado = ' PetaBytes'
-            if (numero < math.pow(1024, 2)) {
-                resultado = 1 / numero
-            }
-            else if (numeo >= math.pow(1024, 2)) {
-                resultado = math.pow(1024, 2)
-            }
-            else { resultado }
-            break
-        case '9': tipoDeDadoConvertido = ' YottaBytes'
-            tipoDeDado = ' PetaBytes'
-            if (numero < math.pow(1024, 3)) {
-                resultado = 1 / numero
-            }
-            else if (numeo >= math.pow(1024, 3)) {
-                resultado = math.pow(1024, 3)
-            }
-            else { resultado }
-            break
-        default: tipoDeDadoConvertido = 'Não informado'
-        alert('Saindo do programa...')
-            break
+    else if (dadoConverter === 'Byte' && dadoConvertido === 'PettaByte') {
+        if (numero < Math.pow(1024, 5)) {
+            inputResult.value = 1 / numero + ' ' + dadoConvertido+"'s'"
+        } else if (numero >= Math.pow(1024, 5)) {
+            numero / Math.pow(1024, 5) + ' ' + dadoConvertido+"'s'"
+        } else { "Erro" }
+
     }
-}
-else if (dado == 7) {
-    switch (dadoConvertido) {
-        case '1': tipoDeDadoConvertido = ' Bytes'
-            tipoDeDado = ' ExaBytes'
-            if (numero <= 1) {
-                resultado = math.pow(1024, 6)
-            }
-            else if (numero > 1) {
-                resultado = numero * math.pow(1024, 6)
-            }
-            else { resultado }
-            break
-        case '2': tipoDeDadoConvertido = 'KiloBytes'
-            tipoDeDado = ' ExaBytes'
-            if (numero <= math.pow(1024, 5)) {
-                resultado = math.pow(1024, 5)
-            }
-            else if (numero > 1) {
-                resultado = numero * math.pow(1024, 5)
-            }
-            else { resultado }
-            break
-        case '3': tipoDeDadoConvertido = ' MegaBytes'
-            tipoDeDado = ' ExaBytes'
-            if (numero <= 1) {
-                resultado = math.pow(1024, 4)
-            }
-            else if (resultado > 1) {
-                resultado = numero * math.pow(1024, 4)
-            }
-            else { resultado }
-            break
-        case '4': tipoDeDadoConvertido = ' GigaBytes'
-            tipoDeDado = ' ExaBytes'
-            if (numero >= 1) {
-                resultado = math.pow(1024, 3)
-            }
-            else if (numero > 1) {
-                resultado = numero * math.pow(1021, 3)
-            }
-            else { resultado }
-            break
-        case '5': tipoDeDadoConvertido = ' TeraBytes'
-            tipoDeDado = ' ExaBytes'
-            if (numero <= 1) {
-                resultado = math.pow(1024, 2)
-            }
-            else if (numero > 1) {
-                resultado = numero * math.po2(1024, 2)
-            }
-            else { resultado }
-            break
-        case '6': tipoDeDadoConvertido = ' PetaBytes'
-            tipoDeDado = ' ExaBytes'
-            if (numero <= 1) {
-                resultado = 1024
-            }
-            else if (numero > 1) {
-                resultado = numero * 1024
-            }
-            else { resultado }
-            break
-        case '7': tipoDeDadoConvertido = ' ExaBytes'
-            tipoDeDado = ' ExaBytes'
-            resultado = numero
-            break
-        case '8': tipoDeDadoConvertido = ' ZettaBytes'
-            tipoDeDado = ' ExaBytes'
-            if (numero < 1024) {
-                resultado = 1 / numero
-            }
-            else if (numeo >= 1024) {
-                resultado = numero / 1024
-            }
-            else { resultado }
-            break
-        case '9': tipoDeDadoConvertido = ' YottaBytes'
-            tipoDeDado = ' ExaBytes'
-            if (numero < math.pow(1024, 2)) {
-                resultado = 1 / numero
-            }
-            else if (numeo >= math.pow(1024, 2)) {
-                resultado = numero / math.pow(1024, 2)
-            }
-            else { resultado }
-            break
-        default: tipoDeDadoConvertido = 'Não informado'
-        alert('Saindo do programa...')
-            break
+    else if (dadoConverter === 'KiloByte' && dadoConvertido === 'ExaByte') {
+        if (numero < Math.pow(1024, 6)) {
+            inputResult.value = 1 / numero + ' ' + dadoConvertido+"'s'"
+        } else if (numero >= Math.pow(1024, 6)) {
+            numero / Math.pow(1024, 6) + ' ' + dadoConvertido+"'s'"
+        } else { "Erro" }
+
     }
-}
-else if (dado == 8) {
-    switch (dadoConvertido) {
-        case '1': tipoDeDadoConvertido = ' Bytes'
-            tipoDeDado = ' ZettaBytes'
-            if (numero <= 1) {
-                resultado = math.pow(1024, 7)
-            }
-            else if (numero <= 1) {
-                resultado = numero * math.pow(1024, 7)
-            }
-            else { resultado }
-            break
-        case '2': tipoDeDadoConvertido = 'KiloBytes'
-            tipoDeDado = ' ZettaBytes'
-            if (numero <= 1) {
-                resultado = math.pow(1024, 6)
-            }
-            else if (numero <= 1) {
-                resultado = numero * math.pow(1024, 6)
-            }
-            else { resultado }
-            break
-        case '3': tipoDeDadoConvertido = ' MegaBytes'
-            tipoDeDado = ' ZettaBytes'
-            if (numero <= 1) {
-                resultado = math.pow(1024, 5)
-            }
-            else if (numero > 1) {
-                resultado = numero * math.pow(1024, 5)
-            }
-            else { resultado }
-            break
-        case '4': tipoDeDadoConvertido = ' GigaBytes'
-            tipoDeDado = ' ZettaBytes'
-            if (numero <= 1) {
-                resultado = math.pow(1024, 4)
-            }
-            else if (resultado > 1) {
-                resultado = numero * math.pow(1024, 4)
-            }
-            else { resultado }
-            break
-        case '5': tipoDeDadoConvertido = ' TeraBytes'
-            tipoDeDado = ' ZettaBytes'
-            if (numero >= 1) {
-                resultado = math.pow(1024, 3)
-            }
-            else if (numero > 1) {
-                resultado = numero * math.pow(1021, 3)
-            }
-            else { resultado }
-            break
-        case '6': tipoDeDadoConvertido = ' PetaBytes'
-            tipoDeDado = ' ZettaBytes'
-            if (numero <= 1) {
-                resultado = math.pow(1024, 2)
-            }
-            else if (numero > 1) {
-                resultado = numero * math.pow(1024, 1)
-            }
-            else { resultado }
-            break
-        case '7': tipoDeDadoConvertido = ' ExaBytes'
-            tipoDeDado = ' ZettaBytes'
-            if (numero <= 1) {
-                resultado = 1024
-            }
-            else if (numero > 1) {
-                resultado = numero * 1024
-            }
-            else { resultado }
-            break
-        case '8': tipoDeDadoConvertido = ' ZettaBytes'
-            tipoDeDado = ' ZettaBytes'
-            resultado = numero
-            break
-        case '9': tipoDeDadoConvertido = ' Bytes'
-            tipoDeDado = ' ZettaBytes'
-            if (numero < 1024) {
-                resultado = 1 / numero
-            }
-            else if (numeo >= 1024) {
-                resultado = numero / 1024
-            }
-            else { resultado }
-            break
-        default: tipoDeDadoConvertido = 'Não informado'
-        alert('Saindo do programa...')
-            break
+    else if (dadoConverter === 'Byte' && dadoConvertido === 'ZettaByte') {
+        if (numero < Math.pow(1024, 7)) {
+            inputResult.value = 1 / numero + ' ' + dadoConvertido+"'s'"
+        } else if (numero >= Math.pow(1024, 7)) {
+            numero / Math.pow(1024, 7) + ' ' + dadoConvertido+"'s'"
+        } else { "Erro" }
     }
-}
-else if (dado == 9) {
-    switch (dadoConvertido) {
-        case '1': tipoDeDadoConvertido = ' Bytes'
-            tipoDeDado = ' YottaBytes'
-            if (numero <= 1) {
-                resultado = resultado = numero * math.pow(1024, 8)
-            }
-            else if (numero <= 1) {
-                resultado = numero * math.pow(1024, 8)
-            }
-            else { resultado }
-            break
-        case '2': tipoDeDadoConvertido = 'KiloBytes'
-            tipoDeDado = ' YottaBytes'
-            if (numero <= 1) {
-                resultado = resultado = numero * math.pow(1024, 7)
-            }
-            else if (numero > 1) {
-                resultado = numero * math.pow(1024, 7)
-            }
-            else { resultado }
-            break
-        case '3': tipoDeDadoConvertido = ' MegaBytes'
-            tipoDeDado = ' YottaBytes'
-            if (numero <= 1) {
-                resultado = resultado = numero * math.pow(1024, 6)
-            }
-            else if (numero > 1) {
-                resultado = numero * math.pow(1024, 6)
-            }
-            else { resultado }
-            break
-        case '4': tipoDeDadoConvertido = ' GigaBytes'
-            tipoDeDado = ' YottaBytes'
-            if (numero <= 1) {
-                resultado = math.pow(1024, 5)
-            }
-            else if (numero > 1) {
-                resultado = numero * math.pow(1024, 5)
-            }
-            else { resultado }
-            break
-        case '5': tipoDeDadoConvertido = ' TeraBytes'
-            tipoDeDado = ' YottaBytes'
-            if (numero <= 1) {
-                resultado = math.pow(1024, 4)
-            }
-            else if (resultado > 1) {
-                resultado = numero * math.pow(1024, 4)
-            }
-            else { resultado }
-            break
-        case '6': tipoDeDadoConvertido = ' PetaBytes'
-            tipoDeDado = ' YottaBytes'
-            if (numero >= 1) {
-                resultado = math.pow(1024, 3)
-            }
-            else if (numero > 1) {
-                resultado * math.pow(1021, 3)
-            }
-            else { resultado }
-            break
-        case '7': tipoDeDadoConvertido = ' ExaBytes'
-            tipoDeDado = ' YottaBytes'
-            if (numero <= 1) {
-                resultado = math.pow(1024, 2)
-            }
-            else if (numero > 1) {
-                resultado * numero / math.pow(1024, 2)
-            }
-            else { resultado }
-            break
-        case '8': tipoDeDadoConvertido = ' ZettaBytes'
-            tipoDeDado = ' YottaBytes'
-            if (numero <= 1) {
-                resultado = 1024
-            }
-            else if (numero > 1) {
-                resultado = numero * 1024
-            }
-            else { resultado }
-            break
-        case '9': tipoDeDadoConvertido = ' YottaBytes'
-            tipoDeDado = ' YottaBytes'
-            resultado = numero
-            break
-        default: tipoDeDadoConvertido = 'Não informado'
-        alert('Saindo do programa...')
-            break
+    else if (dadoConverter === 'Byte' && dadoConvertido === 'YottaByte') {
+        if (numero < Math.pow(1024, 8)) {
+            inputResult.value = 1 / numero + ' ' + dadoConvertido+"'s'"
+        } else if (numero >= Math.pow(1024, 8)) {
+            numero / Math.pow(1024, 8) + ' ' + dadoConvertido+"'s'"
+        } else { "Erro" }
     }
+    //KiloByte
+    if (dadoConverter === 'KiloByte' && dadoConvertido === 'Byte') {
+        if (numero <= 1) {
+            inputResult.value = 1024+ ' ' + dadoConvertido+"'s'"
+        }
+        else if (numero > 1) {
+            inputResult.value = numero * 1024 + ' ' + dadoConvertido+"'s'"
+        } else { "Erro" }
+    }
+    else if (dadoConverter === 'KiloByte' && dadoConvertido === 'KiloByte') {
+        inputResult.value = numero + ' ' + dadoConvertido+"'s'"
+    }
+    else if (dadoConverter === 'KiloByte' && dadoConvertido === 'MegaByte') {
+        if (numero < 1024) {
+            inputResult.value = 1 / numero + ' ' + dadoConvertido+"'s'"
+        } else if (numero >= 1024) {
+            inputResult.value = numero / 1024
+        } else { "Erro" }
 
-}
+    }
+    else if (dadoConverter === 'KiloByte' && dadoConvertido === 'GigaByte') {
+        if (numero < Math.pow(1024, 2)) {
+            inputResult.value = 1 / numero + ' ' + dadoConvertido+"'s'"
+        } else if (numero >= Math.pow(1024, 2)) {
+            inputResult.value = numero / Math.pow(1024, 2) + ' ' + dadoConvertido+"'s'"
+        } else { "Erro" }
 
-else { resultado = 'Nenhum valor digitado' }
+    }
+    else if (dadoConverter === 'KiloByte' && dadoConvertido === 'TeraByte') {
+        if (numero < Math.pow(1024, 3)) {
+            inputResult.value = 1 / numero + ' ' + dadoConvertido+"'s'"
+        } else if (numero >= Math.pow(1024, 3)) {
+            inputResult.value = numero / Math.pow(1024, 3) + ' ' + dadoConvertido+"'s'"
+        } else { "Erro" }
 
-alert('Valor e tipo de dado a converter:' + numero + tipoDeDado + '\nValor e tipo de dado convertido: ' + resultado + tipoDeDadoConvertido)
+    }
+    else if (dadoConverter === 'KiloByte' && dadoConvertido === 'PettaByte') {
+        if (numero < Math.pow(1024, 4)) {
+            inputResult.value = 1 / numero + ' ' + dadoConvertido+"'s'"
+        } else if (numero >= Math.pow(1024, 4)) {
+            inputResult.value = numero / Math.pow(1024, 4) + ' ' + dadoConvertido+"'s'"
+        } else { "Erro" }
+    }
+    else if (dadoConverter === 'KiloByte' && dadoConvertido === 'ExaByte') {
+        if (numero < Math.pow(1024, 5)) {
+            inputResult.value = 1 / numero + ' ' + dadoConvertido+"'s'"
+        } else if (numero >= Math.pow(1024, 5)) {
+            inputResult.value = numero / Math.pow(1024, 5) + ' ' + dadoConvertido+"'s'"
+        } else { "Erro" }
+    }
+    else if (dadoConverter === 'KiloByte' && dadoConvertido === 'ZettaByte') {
+        if (numero < Math.pow(1024, 6)) {
+            inputResult.value = 1 / numero + ' ' + dadoConvertido+"'s'"
+        } else if (numero >= Math.pow(1024, 6)) {
+            inputResult.value = numero / Math.pow(1024, 6) + ' ' + dadoConvertido+"'s'"
+        } else { "Erro" }
+    }
+    else if (dadoConverter === 'KiloByte' && dadoConvertido === 'YottaByte') {
+        if (numero < Math.pow(1024, 7)) {
+            inputResult.value = 1 /  + ' ' + dadoConvertido+"'s'"
+        } else if (numero >= Math.pow(1024, 7)) {
+            inputResult.value = numero / Math.pow(1024, 7) + ' ' + dadoConvertido+"'s'"
+        } else { "Erro" }
+    }
+    //MegaByte
+    if (dadoConverter === 'MegaByte' && dadoConvertido === 'Byte') {
+        if (numero <= 1) {
+            inputResult.value = Math.pow(1024, 2)+ ' ' + dadoConvertido+"'s'"
+        } else if (numero > 1) {
+            inputResult.value = numero * Math.pow(1024, 2) + ' ' + dadoConvertido+"'s'"
+        } else { "Erro" }
+    }
+    else if (dadoConverter === 'MegaByte' && dadoConvertido === 'KiloByte') {
+        if (numero <= 1) {
+            inputResult.value = 1024 + ' ' + dadoConvertido+"'s'"
+        } else if (numero > 1) {
+            inputResult.value = numero * 1024 + ' ' + dadoConvertido+"'s'"
+        } else { "Erro" }
+    }
+    else if (dadoConverter === 'MegaByte' && dadoConvertido === 'MegaByte') {
+        inputResult.value = numero + ' ' + dadoConvertido+"'s'"
+    }
+    else if (dadoConverter === 'MegaByte' && dadoConvertido === 'GigaByte') {
+
+        if (numero < 1024) {
+            inputResult.value = 1 / numero + ' ' + dadoConvertido+"'s'"
+        } else if (numero >= 1024) {
+            inputResult.value = numero / 1024 + ' ' + dadoConvertido+"'s'"
+        } else { "Erro" }
+    }
+    else if (dadoConverter === 'MegaByte' && dadoConvertido === 'TeraByte') {
+        if (numero < Math.pow(1024, 2)) {
+            inputResult.value = 1 / numero + ' ' + dadoConvertido+"'s'"
+        } else if (numero >= Math.pow(1024, 2)) {
+            inputResult.value = numero / Math.pow(1024, 2) + ' ' + dadoConvertido+"'s'"
+        } else { "Erro" }
+    }
+    else if (dadoConverter === 'MegaByte' && dadoConvertido === 'PettaByte') {
+        if (numero < Math.pow(1024, 4)) {
+            inputResult.value = 1 / numero + ' ' + dadoConvertido+"'s'"
+        } else if (numero >= Math.pow(1024, 4)) {
+            inputResult.value = numero / Math.pow(1024, 4) + ' ' + dadoConvertido+"'s'"
+        } else { "Erro" }
+    }
+    else if (dadoConverter === 'MegaByte' && dadoConvertido === 'ExaByte') {
+        if (numero < Math.pow(1024, 4)) {
+            inputResult.value = 1 / numero + ' ' + dadoConvertido+"'s'"
+        } else if (numero >= Math.pow(1024, 4)) {
+            inputResult.value = numero / Math.pow(1024, 4) + ' ' + dadoConvertido+"'s'"
+        } else { "Erro" }
+    }
+    else if (dadoConverter === 'MegaByte' && dadoConvertido === 'ZettaByte') {
+        if (numero < Math.pow(1024, 5)) {
+            inputResult.value = 1 / numero + ' ' + dadoConvertido+"'s'"
+        } else if (numero >= Math.pow(1024, 5)) {
+            inputResult.value = numero / Math.pow(1024, 5) + ' ' + dadoConvertido+"'s'"
+        } else { "Erro" }
+    }
+    else if (dadoConverter === 'MegaByte' && dadoConvertido === 'YottaByte') {
+        if (numero < Math.pow(1024, 6)) {
+            inputResult.value = 1 /  + ' ' + dadoConvertido+"'s'"
+        } else if (numero >= Math.pow(1024, 6)) {
+            inputResult.value = numero / Math.pow(1024, 6) + ' ' + dadoConvertido+"'s'" + ' ' + dadoConvertido+"'s'"
+        } else { "Erro" }
+    }
+    //GigaByte
+    if (dadoConverter === 'GigaByte' && dadoConvertido === 'Byte') {
+        if (numero <= 1) {
+            inputResult.value = Math.pow(1024, 3) + ' ' + dadoConvertido+"'s'"
+        } else if (numero > 1) {
+            inputResult.value = numero * Math.pow(1024, 3) + ' ' + dadoConvertido+"'s'"
+        } else { "Erro" }
+
+    }
+    else if (dadoConverter === 'GigaByte' && dadoConvertido === 'KiloByte') {
+        if (numero <= 1) {
+            inputResult.value = Math.pow(1024, 2) + ' ' + dadoConvertido+"'s'"
+        } else if (numero > 1) {
+            inputResult.value = numero * Math.pow(1024, 2) + ' ' + dadoConvertido+"'s'"
+        } else { "Erro" }
+    }
+    else if (dadoConverter === 'GigaByte' && dadoConvertido === 'MegaByte') {
+        if (numero <= 1) {
+            inputResult.value = 1024 + ' ' + dadoConvertido+"'s'"
+        } else if (numero > 1) {
+            inputResult.value = numero * 1024 + ' ' + dadoConvertido+"'s'"
+        } else { "Erro" }
+
+    }
+    else if (dadoConverter === 'GigaByte' && dadoConvertido === 'GigaByte') {
+        inputResult.value = numero
+    }
+    else if (dadoConverter === 'GigaByte' && dadoConvertido === 'TeraByte') {
+        if (numero < 1024) {
+            inputResult.value = 1 / numero + ' ' + dadoConvertido+"'s'"
+        } else if (numero >= 1024) {
+            inputResult.value = numero / 1024 + ' ' + dadoConvertido+"'s'"
+        } else { "Erro" }
+    }
+    else if (dadoConverter === 'GigaByte' && dadoConvertido === 'PettaByte') {
+        if (numero < Math.pow(1024, 2)) {
+            inputResult.value = 1 / numero + ' ' + dadoConvertido+"'s'"
+        } else if (numero >= Math.pow(1024, 2)) {
+            inputResult.value = numero / Math.pow(1024, 2) + ' ' + dadoConvertido+"'s'"
+        } else { "Erro" }
+    }
+    else if (dadoConverter === 'GigaByte' && dadoConvertido === 'ExaByte') {
+        if (numero < Math.pow(1024, 3)) {
+            inputResult.value = 1 / numero + ' ' + dadoConvertido+"'s'"
+        } else if (numero >= Math.pow(1024, 3)) {
+            inputResult.value = numero / Math.pow(1024, 3) + ' ' + dadoConvertido+"'s'"
+        } else { "Erro" }
+    }
+    else if (dadoConverter === 'GigaByte' && dadoConvertido === 'ZettaByte') {
+        if (numero < Math.pow(1024, 4)) {
+            inputResult.value = 1 / numero + ' ' + dadoConvertido+"'s'"
+        } else if (numero >= Math.pow(1024, 4)) {
+            inputResult.value = numero / Math.pow(1024, 4) + ' ' + dadoConvertido+"'s'"
+        } else { "Erro" }
+    }
+    else if (dadoConverter === 'GigaByte' && dadoConvertido === 'YottaByte') {
+        if (numero < Math.pow(1024, 5)) {
+            inputResult.value = 1 /  + ' ' + dadoConvertido+"'s'"
+        } else if (numero >= Math.pow(1024, 5)) {
+            inputResult.value = numero / Math.pow(1024, 5) + ' ' + dadoConvertido+"'s'" + ' ' + dadoConvertido+"'s'"
+        } else { "Erro" }
+
+    }
+    //TeraByte
+    if (dadoConverter === 'TeraByte' && dadoConvertido === 'Byte') {
+        if (numero <= 1) {
+            inputResult.value = Math.pow(1024, 4) + ' ' + dadoConvertido+"'s'"
+        } else if (numero > 1) {
+            inputResult.value = numero * Math.pow(1024, 4) + ' ' + dadoConvertido+"'s'"
+        } else { "Erro" }
+
+    }
+    else if (dadoConverter === 'TeraByte' && dadoConvertido === 'KiloByte') {
+        if (numero <= 1) {
+            inputResult.value = Math.pow(1024, 3) + ' ' + dadoConvertido+"'s'"
+        } else if (numero > 1) {
+            inputResult.value = numero * Math.pow(1024, 3) + ' ' + dadoConvertido+"'s'"
+        } else { "Erro" }
+    }
+    else if (dadoConverter === 'TeraByte' && dadoConvertido === 'MegaByte') {
+        if (numero <= 1) {
+            inputResult.value = Math.pow(1024, 2) + ' ' + dadoConvertido+"'s'"
+        } else if (numero > 1) {
+            inputResult.value = numero * Math.pow(1024, 2) + ' ' + dadoConvertido+"'s'"
+        } else { "Erro" }
+    }
+    else if (dadoConverter === 'TeraByte' && dadoConvertido === 'GigaByte') {
+        if (numero <= 1) {
+            inputResult.value = 1024 + ' ' + dadoConvertido+"'s'"
+        } else if (numero > 1) {
+            inputResult.value = numero * 1024 + ' ' + dadoConvertido+"'s'"
+        } else { "Erro" }
+    }
+    else if (dadoConverter === 'TeraByte' && dadoConvertido === 'TeraByte') {
+        inputResult.value = numero
+    }
+    else if (dadoConverter === 'TeraByte' && dadoConvertido === 'PettaByte') {
+        if (numero < 1024) {
+            inputResult.value = 1 / numero + ' ' + dadoConvertido+"'s'"
+        } else if (numero >= 1024) {
+            inputResult.value = numero / 1024 + ' ' + dadoConvertido+"'s'"
+        } else { "Erro" }
+    }
+    else if (dadoConverter === 'TeraByte' && dadoConvertido === 'ExaByte') {
+        if (numero < Math.pow(1024, 2)) {
+            inputResult.value = 1 / numero + ' ' + dadoConvertido+"'s'"
+        } else if (numero >= Math.pow(1024, 2)) {
+            inputResult.value = numero / Math.pow(1024, 2) + ' ' + dadoConvertido+"'s'"
+        } else { "Erro" }
+
+    }
+    else if (dadoConverter === 'TeraByte' && dadoConvertido === 'ZettaByte') {
+        if (numero < Math.pow(1024, 3)) {
+            inputResult.value = 1 / numero + ' ' + dadoConvertido+"'s'"
+        } else if (numero >= Math.pow(1024, 3)) {
+            inputResult.value = numero / Math.pow(1024, 3) + ' ' + dadoConvertido+"'s'"
+        } else { "Erro" }
+    }
+    else if (dadoConverter === 'TeraByte' && dadoConvertido === 'YottaByte') {
+        if (numero < Math.pow(1024, 4)) {
+            inputResult.value = 1 /  + ' ' + dadoConvertido+"'s'"
+        } else if (numero >= Math.pow(1024, 4)) {
+            inputResult.value = numero / Math.pow(1024, 4)  + ' ' + dadoConvertido+"'s'"
+        } else { "Erro" }
+    }
+    //PettaByte
+    if (dadoConverter === 'PettaByte' && dadoConvertido === 'Byte') {
+
+        if (numero <= 1) {
+            inputResult.value = math.pow(1024, 3) + ' ' + dadoConvertido+"'s'"
+        }
+        else if (numero > 1) {
+            inputResult.value = numero * math.pow(1021, 3) + ' ' + dadoConvertido+"'s'"
+        }
+        else { "Erro" }
+
+    }
+    else if (dadoConverter === 'PettaByte' && dadoConvertido === 'KiloByte') {
+        if (numero <= 1) {
+            inputResult.value = math.pow(1024, 2) + ' ' + dadoConvertido+"'s'"
+        }
+        else if (numero > 1) {
+            inputResult.value = numero * math.pow(1024, 2) + ' ' + dadoConvertido+"'s'"
+        }
+        else { "Erro" }
+    }
+    else if (dadoConverter === 'PettaByte' && dadoConvertido === 'MegaByte') {
+        if (numero <= 1) {
+            inputResult.value = math.pow(1024, 3) + ' ' + dadoConvertido+"'s'"
+        }
+        else if (numero > 1) {
+            inputResult.value = numero * math.pow(1021, 3) + ' ' + dadoConvertido+"'s'"
+        }
+        else { "Erro" }
+    }
+    else if (dadoConverter === 'PettaByte' && dadoConvertido === 'GigaByte') {
+
+        if (numero <= 1) {
+            inputResult.value = math.pow(1024, 2) + ' ' + dadoConvertido+"'s'"
+        }
+        else if (numero > 1) {
+            inputResult.value = numero * math.pow(1024, 2) + ' ' + dadoConvertido+"'s'"
+        }
+        else { "Erro" }
+    }
+    else if (dadoConverter === 'PettaByte' && dadoConvertido === 'TeraByte') {
+        if (numero <= 1) {
+            inputResult.value = 1024 + ' ' + dadoConvertido+"'s'"
+        }
+        else if (numero > 1) {
+            inputResult.value = numero * 1024 + ' ' + dadoConvertido+"'s'"
+        }
+        else { "Erro" }
+    }
+    else if (dadoConverter === 'PettaByte' && dadoConvertido === 'PettaByte') {
+        inputResult.value = numero
+    }
+    else if (dadoConverter === 'PettaByte' && dadoConvertido === 'ExaByte') {
+        if (numero < 1024) {
+            inputResult.value = 1 / numero + ' ' + dadoConvertido+"'s'"
+        }
+        else if (numeo >= 1024) {
+            inputResult.value = numero / 1024 + ' ' + dadoConvertido+"'s'"
+        }
+        else { "Erro" }
+    }
+    else if (dadoConverter === 'PettaByte' && dadoConvertido === 'ZettaByte') {
+        if (numero < math.pow(1024, 2)) {
+            inputResult.value = 1 / numero + ' ' + dadoConvertido+"'s'"
+        }
+        else if (numeo >= math.pow(1024, 2)) {
+            inputResult.value = math.pow(1024, 2) + ' ' + dadoConvertido+"'s'"
+        }
+        else { "Erro" }
+    }
+    else if (dadoConverter === 'PettaByte' && dadoConvertido === 'YottaByte') {
+        if (numero < math.pow(1024, 3)) {
+            inputResult.value = 1 /  + ' ' + dadoConvertido+"'s'"
+        }
+        else if (numeo >= math.pow(1024, 3)) {
+            inputResult.value = math.pow(1024, 3)  + ' ' + dadoConvertido+"'s'"
+        }
+        else { "Erro" }
+    }
+    //ExaByte
+    if (dadoConverter === 'ExaByte' && dadoConvertido === 'Byte') {
+        if (numero <= 1) {
+            inputResult.value = math.pow(1024, 6) + ' ' + dadoConvertido+"'s'"
+        }
+        else if (numero > 1) {
+            inputResult.value = numero * math.pow(1024, 6) + ' ' + dadoConvertido+"'s'"
+        }
+        else { "Erro" }
+    }
+    else if (dadoConverter === 'ExaByte' && dadoConvertido === 'KiloByte') {
+        if (numero <= math.pow(1024, 5)) {
+            inputResult.value = math.pow(1024, 5) + ' ' + dadoConvertido+"'s'"
+        }
+        else if (numero > 1) {
+            inputResult.value = numero * math.pow(1024, 5) + ' ' + dadoConvertido+"'s'"
+        }
+        else { "Erro" }
+    }
+    else if (dadoConverter === 'ExaByte' && dadoConvertido === 'MegaByte') {
+        if (numero <= 1) {
+            inputResult.value = math.pow(1024, 4) + ' ' + dadoConvertido+"'s'"
+        }
+        else if (inputResult.value > 1) {
+            inputResult.value = numero * math.pow(1024, 4) + ' ' + dadoConvertido+"'s'"
+        }
+        else { "Erro" }
+    }
+    else if (dadoConverter === 'ExaByte' && dadoConvertido === 'GigaByte') {
+        if (numero <= 1) {
+            inputResult.value = math.pow(1024, 3) + ' ' + dadoConvertido+"'s'"
+        }
+        else if (inputResult.value > 1) {
+            inputResult.value = numero * math.pow(1024, 3) + ' ' + dadoConvertido+"'s'"
+        }
+        else { "Erro" }
+    }
+    else if (dadoConverter === 'ExaByte' && dadoConvertido === 'TeraByte') {
+        if (numero <= 1) {
+            inputResult.value = math.pow(1024, 2) + ' ' + dadoConvertido+"'s'"
+        }
+        else if (numero > 1) {
+            inputResult.value = numero * math.pow(1024, 2) + ' ' + dadoConvertido+"'s'"
+        }
+        else { "Erro" }
+    }
+    else if (dadoConverter === 'ExaByte' && dadoConvertido === 'PettaByte') {
+
+        if (numero <= 1) {
+            inputResult.value = 1024 + ' ' + dadoConvertido+"'s'"
+        }
+        else if (numero > 1) {
+            inputResult.value = numero * 1024 + ' ' + dadoConvertido+"'s'"
+        }
+        else { "Erro" }
+    }
+    else if (dadoConverter === 'ExaByte' && dadoConvertido === 'ExaByte') {
+        inputResult.value = numero
+    }
+    else if (dadoConverter === 'ExaByte' && dadoConvertido === 'ZettaByte') {
+        if (numero < 1024) {
+            inputResult.value = 1 / numero + ' ' + dadoConvertido+"'s'"
+        }
+        else if (numeo >= 1024) {
+            inputResult.value = numero / 1024 + ' ' + dadoConvertido+"'s'"
+        }
+        else { "Erro" }
+
+    }
+    else if (dadoConverter === 'ExaByte' && dadoConvertido === 'YottaByte') {
+        if (numero < math.pow(1024, 2)) {
+            inputResult.value = 1 /  + ' ' + dadoConvertido+"'s'"
+        }
+        else if (numeo >= math.pow(1024, 2)) {
+            inputResult.value = numero / math.pow(1024, 2)  + ' ' + dadoConvertido+"'s'"
+        }
+        else { "Erro" }
+    }
+    //ZettaByte
+    if (dadoConverter === 'ZettaByte' && dadoConvertido === 'Byte') {
+        if (numero <= 1) {
+            inputResult.value = math.pow(1024, 7) + ' ' + dadoConvertido+"'s'"
+        }
+        else if (numero <= 1) {
+            inputResult.value = numero * math.pow(1024, 7) + ' ' + dadoConvertido+"'s'"
+        }
+        else{"Erro"}
+    }
+    else if (dadoConverter === 'ZettaByte' && dadoConvertido === 'KiloByte') {
+        if (numero <= 1) {
+            inputResult.value = math.pow(1024, 6) + ' ' + dadoConvertido+"'s'"
+        }
+        else if (numero <= 1) {
+            inputResult.value = numero * math.pow(1024, 6) + ' ' + dadoConvertido+"'s'"
+        }
+        else{"Erro"}
+    }
+    else if (dadoConverter === 'ZettaByte' && dadoConvertido === 'MegaByte') {
+        if (numero <= 1) {
+            inputResult.value = math.pow(1024, 5) + ' ' + dadoConvertido+"'s'"
+        }
+        else if (numero > 1) {
+            inputResult.value = numero * math.pow(1024, 5) + ' ' + dadoConvertido+"'s'"
+        }
+        else{"Erro"}
+    }
+    else if (dadoConverter === 'ZettaByte' && dadoConvertido === 'GigaByte') {
+        if (numero <= 1) {
+            inputResult.value = math.pow(1024, 4) + ' ' + dadoConvertido+"'s'"
+        }
+        else if (inputResult.value > 1) {
+            inputResult.value = numero * math.pow(1024, 4) + ' ' + dadoConvertido+"'s'"
+        }
+        else{"Erro"}
+    }
+    else if (dadoConverter === 'ZettaByte' && dadoConvertido === 'TeraByte') {
+        if (numero >= 1) {
+            inputResult.value = math.pow(1024, 3) + ' ' + dadoConvertido+"'s'"
+        }
+        else if (numero > 1) {
+            inputResult.value = numero * math.pow(1021, 3) + ' ' + dadoConvertido+"'s'"
+        }
+        else{"Erro"}
+    }
+    else if (dadoConverter === 'ZettaByte' && dadoConvertido === 'PettaByte') {
+        if (numero <= 1) {
+            inputResult.value = math.pow(1024, 2) + ' ' + dadoConvertido+"'s'"
+        }
+        else if (numero > 1) {
+            inputResult.value = numero * math.pow(1024, 1) + ' ' + dadoConvertido+"'s'"
+        }
+        else{"Erro"}
+    }
+    else if (dadoConverter === 'ZettaByte' && dadoConvertido === 'ExaByte') {
+        if (numero <= 1) {
+            inputResult.value = 1024 + ' ' + dadoConvertido+"'s'"
+        }
+        else if (numero > 1) {
+            inputResult.value = numero * 1024 + ' ' + dadoConvertido+"'s'"
+        }
+        else{"Erro"}
+    }
+    else if (dadoConverter === 'ZettaByte' && dadoConvertido === 'ZettaByte') {
+        inputResult.value = numero + ' ' + dadoConvertido+"'s'"
+    }
+    else if (dadoConverter === 'ZettaByte' && dadoConvertido === 'YottaByte') {
+        if (numero < 1024) {
+            inputResult.value = 1 / numero + ' ' + dadoConvertido+"'s'"
+        }
+        else if (numeo >= 1024) {
+            inputResult.value = numero / 1024  + ' ' + dadoConvertido+"'s'"
+        }
+        else{"Erro"}
+    }
+    //YottaByte
+    if (dadoConverter === 'YottaByte' && dadoConvertido === 'Byte') {
+        if (numero <= 1) {
+            inputResult.value = math.pow(1024, 8) + ' ' + dadoConvertido+"'s'"
+        }
+        else if (numero <= 1) {
+            inputResult.value = numero * math.pow(1024, 8) + ' ' + dadoConvertido+"'s'"
+        }
+        else { "Erro" }
+    }
+    else if (dadoConverter === 'YottaByte' && dadoConvertido === 'KiloByte') {
+        if (numero <= 1) {
+            inputResult.value = math.pow(1024, 7) + ' ' + dadoConvertido+"'s'"
+        }
+        else if (numero > 1) {
+            inputResult.value = numero * math.pow(1024, 7) + ' ' + dadoConvertido+"'s'"
+        }
+        else { "Erro" }
+    }
+    else if (dadoConverter === 'YottaByte' && dadoConvertido === 'MegaByte') {
+        if (numero <= 1) {
+            inputResult.value =  math.pow(1024, 6) + ' ' + dadoConvertido+"'s'"
+        }
+        else if (numero > 1) {
+            inputResult.value = numero * math.pow(1024, 6) + ' ' + dadoConvertido+"'s'"
+        }
+        else { "Erro" }
+
+    }
+    else if (dadoConverter === 'YottaByte' && dadoConvertido === 'GigaByte') {
+        if (numero <= 1) {
+            inputResult.value = math.pow(1024, 5) + ' ' + dadoConvertido+"'s'"
+        }
+        else if (numero > 1) {
+            inputResult.value = numero * math.pow(1024, 5) + ' ' + dadoConvertido+"'s'"
+        }
+        else { "Erro" }
+    }
+    else if (dadoConverter === 'YottaByte' && dadoConvertido === 'TeraByte') {
+        if (numero <= 1) {
+            inputResult.value = math.pow(1024, 4) + ' ' + dadoConvertido+"'s'"
+        }
+        else if (inputResult.value > 1) {
+            inputResult.value = numero * math.pow(1024, 4) + ' ' + dadoConvertido+"'s'"
+        }
+        else { "Erro" }
+    }
+    else if (dadoConverter === 'YottaByte' && dadoConvertido === 'PettaByte') {
+        if (numero >= 1) {
+            inputResult.value = math.pow(1024, 3) + ' ' + dadoConvertido+"'s'"
+        }
+        else if (numero > 1) {
+            inputResult.value * math.pow(1021, 3) + ' ' + dadoConvertido+"'s'"
+        }
+        else { "Erro" }
+    }
+    else if (dadoConverter === 'YottaByte' && dadoConvertido === 'ExaByte') {
+        if (numero <= 1) {
+            inputResult.value = math.pow(1024, 2) + ' ' + dadoConvertido+"'s'"
+        }
+        else if (numero > 1) {
+            inputResult.value * numero / math.pow(1024, 2) + ' ' + dadoConvertido+"'s'"
+        }
+        else { 'Erro' }
+    }
+    else if (dadoConverter === 'YottaByte' && dadoConvertido === 'ZettaByte') {
+        if (numero <= 1) {
+            inputResult.value = 1024 + ' ' + dadoConvertido+"'s'"
+        }
+        else if (numero > 1) {
+            inputResult.value = numero * 1024 + ' ' + dadoConvertido+"'s'"
+        }
+        else { "Erro" }
 
 
+    }
+    else if (dadoConverter === 'YottaByte' && dadoConvertido === 'YottaByte') {
+        inputResult.value =  + ' ' + dadoConvertido+"'s'"
+    }
+})
+
+converter.forEach(function (item) {
+    item.addEventListener('click', function (ev) {
+        ev.preventDefault()
+        dadoConverter = this.id
+        console.log(dadoConverter)
+        inputResult.value = dadoConverter + ' >>> ' + dadoConvertido
+    })
+})
+
+convertido.forEach(function (item) {
+    item.addEventListener('click', function (ev) {
+        ev.preventDefault()
+        dadoConvertido = this.name
+        console.log(dadoConvertido)
+        inputResult.value = dadoConverter + ' >>> ' + dadoConvertido
+    })
+})
 
 
