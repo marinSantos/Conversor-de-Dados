@@ -53,7 +53,7 @@ document.getElementById('convert').addEventListener('click', function (ev) {
         } else { "Erro" }
 
     }
-    else if (dadoConverter === 'KiloByte' && dadoConvertido === 'ExaByte') {
+    else if (dadoConverter === 'Byte' && dadoConvertido === 'ExaByte') {
         if (numero < Math.pow(1024, 6)) {
             inputResult.value = 1 / numero + ' ' + dadoConvertido+"'s'"
         } else if (numero >= Math.pow(1024, 6)) {
@@ -78,7 +78,7 @@ document.getElementById('convert').addEventListener('click', function (ev) {
     //KiloByte
     if (dadoConverter === 'KiloByte' && dadoConvertido === 'Byte') {
         if (numero <= 1) {
-            inputResult.value = 1024+ ' ' + dadoConvertido+"'s'"
+            inputResult.value = 1024 + ' ' + dadoConvertido+"'s'"
         }
         else if (numero > 1) {
             inputResult.value = numero * 1024 + ' ' + dadoConvertido+"'s'"
@@ -134,7 +134,7 @@ document.getElementById('convert').addEventListener('click', function (ev) {
     }
     else if (dadoConverter === 'KiloByte' && dadoConvertido === 'YottaByte') {
         if (numero < Math.pow(1024, 7)) {
-            inputResult.value = 1 /  + ' ' + dadoConvertido+"'s'"
+            inputResult.value = 1 / numero + ' ' + dadoConvertido+"'s'"
         } else if (numero >= Math.pow(1024, 7)) {
             inputResult.value = numero / Math.pow(1024, 7) + ' ' + dadoConvertido+"'s'"
         } else { "Erro" }
@@ -195,7 +195,7 @@ document.getElementById('convert').addEventListener('click', function (ev) {
     }
     else if (dadoConverter === 'MegaByte' && dadoConvertido === 'YottaByte') {
         if (numero < Math.pow(1024, 6)) {
-            inputResult.value = 1 /  + ' ' + dadoConvertido+"'s'"
+            inputResult.value = 1 / numero +' ' + dadoConvertido+"'s'"
         } else if (numero >= Math.pow(1024, 6)) {
             inputResult.value = numero / Math.pow(1024, 6) + ' ' + dadoConvertido+"'s'" + ' ' + dadoConvertido+"'s'"
         } else { "Erro" }
@@ -257,7 +257,7 @@ document.getElementById('convert').addEventListener('click', function (ev) {
     }
     else if (dadoConverter === 'GigaByte' && dadoConvertido === 'YottaByte') {
         if (numero < Math.pow(1024, 5)) {
-            inputResult.value = 1 /  + ' ' + dadoConvertido+"'s'"
+            inputResult.value = 1 / numero  + ' ' + dadoConvertido+"'s'"
         } else if (numero >= Math.pow(1024, 5)) {
             inputResult.value = numero / Math.pow(1024, 5) + ' ' + dadoConvertido+"'s'" + ' ' + dadoConvertido+"'s'"
         } else { "Erro" }
@@ -320,7 +320,7 @@ document.getElementById('convert').addEventListener('click', function (ev) {
     }
     else if (dadoConverter === 'TeraByte' && dadoConvertido === 'YottaByte') {
         if (numero < Math.pow(1024, 4)) {
-            inputResult.value = 1 /  + ' ' + dadoConvertido+"'s'"
+            inputResult.value = 1 / numero  + ' ' + dadoConvertido+"'s'"
         } else if (numero >= Math.pow(1024, 4)) {
             inputResult.value = numero / Math.pow(1024, 4)  + ' ' + dadoConvertido+"'s'"
         } else { "Erro" }
@@ -397,7 +397,7 @@ document.getElementById('convert').addEventListener('click', function (ev) {
     }
     else if (dadoConverter === 'PettaByte' && dadoConvertido === 'YottaByte') {
         if (numero < math.pow(1024, 3)) {
-            inputResult.value = 1 /  + ' ' + dadoConvertido+"'s'"
+            inputResult.value = 1 / numero  + ' ' + dadoConvertido+"'s'"
         }
         else if (numeo >= math.pow(1024, 3)) {
             inputResult.value = math.pow(1024, 3)  + ' ' + dadoConvertido+"'s'"
@@ -475,7 +475,7 @@ document.getElementById('convert').addEventListener('click', function (ev) {
     }
     else if (dadoConverter === 'ExaByte' && dadoConvertido === 'YottaByte') {
         if (numero < math.pow(1024, 2)) {
-            inputResult.value = 1 /  + ' ' + dadoConvertido+"'s'"
+            inputResult.value = 1 / numero  + ' ' + dadoConvertido+"'s'"
         }
         else if (numeo >= math.pow(1024, 2)) {
             inputResult.value = numero / math.pow(1024, 2)  + ' ' + dadoConvertido+"'s'"
@@ -635,7 +635,7 @@ document.getElementById('convert').addEventListener('click', function (ev) {
 
     }
     else if (dadoConverter === 'YottaByte' && dadoConvertido === 'YottaByte') {
-        inputResult.value =  + ' ' + dadoConvertido+"'s'"
+        inputResult.value =  numero + ' ' + dadoConvertido+"'s'"
     }
 })
 
