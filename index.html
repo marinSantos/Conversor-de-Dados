@@ -11,11 +11,13 @@
 </head>
 
 <body>
-    <h1>Conversor de dados</h1>
-
+   <h1>Conversor de Dados</h1>
     <main>
+        <div class="numbers"><h3>Data Valor</h3>
+            <input id="number" type="text">
+        </div>
         <div class="Aconverter">
-            <h3>Dado a Converter</h3><button class="converter" id="Byte">Byte</button>
+           <button class="converter" id="Byte">Byte</button>
             <button class="converter" id="KiloByte">KiloByte</button>
             <button class="converter" id="MegaByte">MegaByte</button>
             <button class="converter" id="GigaByte">GigaByte</button>
@@ -25,14 +27,11 @@
             <button class="converter" id="ZettaByte">ZettaByte</button>
             <button class="converter" id="YottaByte">YottaByte</button>
         </div>
-        <br>
-        <br>
-        <div class="inputNumber"> <label for="number">Valor do dado:</label>
-            <input id="number" type="text">
+
+        <div>
+            <button id="convert">Converter</button>
         </div>
-        <br>
         <div class="jaConvertido">
-            <h3>Dado Convertido</h3>
             <button class="convertido" name="Byte">Byte</button>
             <button class="convertido" name="KiloByte">KiloByte</button>
             <button class="convertido" name="MegaByte">MegaByte</button>
@@ -43,18 +42,12 @@
             <button class="convertido" name="ZettaByte">ZettaByte</button>
             <button class="convertido" name="YottaByte">YottaByte</button>
         </div>
-
-        <br>
-        <br>
-        <div class="resultados"><button id="convert">Converter</button>
-            <br>
-            <br>
-            <label for="result">Dado convertido:</label>
-            <input id="result" type="text" disabled='true' placeholder=""></div>
-        <h2>Em breve estilizado!</h2>
-        <br><br>
-        <a href="legado.html">Clique aqui para acessar a versão inconpleta do Conversor</a>
+ <div class="results"> 
+    <h3>Converted Data</h3>
+    <input id="result" type="text" disabled='true' placeholder=""></div>
     </main>
+    <br>
+    <a href="legado.html">Clique aqui para mudar para a versão legado</a>
 </body>
 
 </html>
