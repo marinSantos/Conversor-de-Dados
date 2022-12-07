@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,45 +9,52 @@
     <title>Conversor</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-   <h1>Conversor de dados</h1>
 
-   <main>
-    <h3>Dado a Converter</h3>
-    <button class="converter" id="Byte">Byte</button>
-    <button class="converter" id="KiloByte">KiloByte</button>
-    <button class="converter" id="MegaByte">MegaByte</button>
-    <button class="converter" id="GigaByte">GigaByte</button>
-    <button class="converter" id="TeraByte">TeraByte</button>
-    <button class="converter" id="PettaByte">PetaByte</button>
-    <button class="converter" id="ExaByte">ExaByte</button>
-    <button class="converter" id="ZettaByte">ZettaByte</button>
-    <button class="converter" id="YottaByte" >YottaByte</button>
-    <br>
-    <br>
-    <label for="number">Valor do dado:</label>
-    <input id="number" type="text"  onkeypress="return event.charCode >= 48 && event.charCode <= 57">
-    <br>
-    <h3>Dado Convertido</h3>
-    <button class="convertido" name="Byte">Byte</button>
-    <button class="convertido" name="KiloByte">KiloByte</button>
-    <button class="convertido" name="MegaByte">MegaByte</button>
-    <button class="convertido" name="GigaByte">GigaByte</button>
-    <button class="convertido" name="TeraByte">TeraByte</button>
-    <button class="convertido" name="PettaByte">PetaByte</button>
-    <button class="convertido" name="ExaByte">ExaByte</button>
-    <button class="convertido" name="ZettaByte">ZettaByte</button>
-    <button class="convertido" name="YottaByte">YottaByte</button>
-    <br>
-    <br>
-    <button id="convert">Converter</button>
-    <br>
-    <br>
-    <label for="result">Dado convertido:</label>
-    <input id="result" type="text" disabled = 'true' placeholder="">
-    <h2>Em breve estilizado!</h2>
-<br><br>
-    <a href="legado.html">Clique aqui para acessar a versão inconpleta do Conversor</a>
-   </main>
+<body>
+    <h1>Conversor de dados</h1>
+
+    <main>
+        <div class="Aconverter">
+            <h3>Dado a Converter</h3><button class="converter" id="Byte">Byte</button>
+            <button class="converter" id="KiloByte">KiloByte</button>
+            <button class="converter" id="MegaByte">MegaByte</button>
+            <button class="converter" id="GigaByte">GigaByte</button>
+            <button class="converter" id="TeraByte">TeraByte</button>
+            <button class="converter" id="PettaByte">PetaByte</button>
+            <button class="converter" id="ExaByte">ExaByte</button>
+            <button class="converter" id="ZettaByte">ZettaByte</button>
+            <button class="converter" id="YottaByte">YottaByte</button>
+        </div>
+        <br>
+        <br>
+        <div class="inputNumber"> <label for="number">Valor do dado:</label>
+            <input id="number" type="text">
+        </div>
+        <br>
+        <div class="jaConvertido">
+            <h3>Dado Convertido</h3>
+            <button class="convertido" name="Byte">Byte</button>
+            <button class="convertido" name="KiloByte">KiloByte</button>
+            <button class="convertido" name="MegaByte">MegaByte</button>
+            <button class="convertido" name="GigaByte">GigaByte</button>
+            <button class="convertido" name="TeraByte">TeraByte</button>
+            <button class="convertido" name="PettaByte">PetaByte</button>
+            <button class="convertido" name="ExaByte">ExaByte</button>
+            <button class="convertido" name="ZettaByte">ZettaByte</button>
+            <button class="convertido" name="YottaByte">YottaByte</button>
+        </div>
+
+        <br>
+        <br>
+        <div class="resultados"><button id="convert">Converter</button>
+            <br>
+            <br>
+            <label for="result">Dado convertido:</label>
+            <input id="result" type="text" disabled='true' placeholder=""></div>
+        <h2>Em breve estilizado!</h2>
+        <br><br>
+        <a href="legado.html">Clique aqui para acessar a versão inconpleta do Conversor</a>
+    </main>
 </body>
+
 </html>
