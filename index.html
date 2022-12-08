@@ -6,7 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script defer src="script.js"></script>
-     <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap" rel="stylesheet">
     <title>Conversor</title>
     <link rel="stylesheet" href="style.css">
 </head>
@@ -16,7 +15,7 @@
 <h1>Conversor de Dados</h1>
     <main>
         <div class="numbers"><h3>Data Valor</h3>
-            <input id="number" type="text">
+            <input id="number" type="text" onkeypress="return onlynumber();">
         </div>
         <div class="Aconverter">
            <button class="converter" id="Byte">Byte</button>
