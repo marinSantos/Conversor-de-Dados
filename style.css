@@ -2,92 +2,111 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    
 }
-body{
+
+body {
+
     text-align: center;
-    background-color:#01092B ;
-    font-family: "Ubuntu", sans-serif;
+
+    background-color: #051d46;
 }
-main{
-    background-color:#095DA6;
-    max-width: 450px ;
+
+main {
+    background-color: #095DA6;
+    max-width: 600px;
     height: 550px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 15px 20px 40px 20px;;
+    padding: 15px 20px 40px 20px;
     border-radius: 15px;
     margin-left: auto;
     margin-right: auto;
-   margin-top: 2%;
-   gap: 30px;
-   border: solid black 5px;
+    margin-top: 2%;
+    gap: 14px;
 }
-h1{
+
+h1 {
     color: white;
     margin-top: 3%;
 }
-h3{
+
+h3 {
     color: white;
 }
-button{
+
+button {
     background-color: white;
     color: black;
-    padding: 3px;
-  border-radius: 5px;
-  height: 30px;
-  cursor: pointer;
-  transition: 0.6s;
-  box-shadow: 1px 1px;
+    border-radius: .25rem;
+    height: 30px;
+    cursor: pointer;
+    transition: 0.8s;
+    box-shadow: 1px 1px;
+    
 }
 button:hover{
-color: #095DA6;
+    filter: brightness(0.6);
+       
 }
-input{
+
+
+input {
     background-color: white;
     color: black;
-    border-radius: 7px;
+    border-radius: .25rem;
     padding: 5px;
     width: 300px;
     border: solid 3px white;
     box-shadow: 1px 1px;
+    text-align: center;
+    font-size: 1.0rem;
 }
-label{
+
+label {
     color: white;
 }
 
-.results, .numbers{
+.results,
+.numbers {
     display: flex;
     flex-direction: column;
     text-align: center;
-    gap: 10px;
+    gap: 5px;
+}
+.results input{
+    font-weight: 550;
 }
 
-.Aconverter{
-    display:grid;
-    grid-template-columns: 80px 80px 80px ;
-    gap: 10px;
+.Aconverter, .jaConvertido {
+    display: grid;
+    grid-template-columns: 80px 80px 80px;
+    gap: 15px;
 }
 
-.jaConvertido{
-    display:grid;
-    grid-template-columns: 80px 80px 80px ;
-    gap: 10px;
-}
-#convert{
+
+#convert {
     width: 200px;
     height: 40px;
 }
-a{
+
+a {
     color: white;
-   font-size: 20px;
-   text-decoration: none;
-   transition: 0.6s;
+    font-size: 20px;
+    text-decoration: none;
+    transition: 0.6s;
 }
-a:hover{
+
+a:hover {
     text-decoration: underline;
 }
-#number{
+
+#number {
     width: 340px;
+}
+.converter, .convertido{
+    text-align: center;
+    height: 37px;
+    width:90px ;
+    transition: 0.7s;
 }
