@@ -7,328 +7,332 @@ let dadoConvertido = ''
 const converter = document.querySelectorAll('.converter')
 const convertido = document.querySelectorAll('.convertido')
 
-
+input.value = ''
 
 
 document.getElementById('convert').addEventListener('click', function (ev) {
     ev.preventDefault()
-    const numero = input.value
+    let numero = input.value
     
+    if(input.value == ''){
+        inputResult = ''
+    }
+  
     //Byte
-    if (dadoConverter === 'Byte' && dadoConvertido === 'Byte') {
+    if (dadoConverter == 'Byte' && dadoConvertido == 'Byte') {
         inputResult.value = numero + ' ' + dadoConvertido+"'s'"
     }
-    else if (dadoConverter === 'Byte' && dadoConvertido === 'KiloByte') {
-        if (input.value < 1024) {
+    else if (dadoConverter == 'Byte' && dadoConvertido == 'KiloByte') {
+        if (numero < 1024) {
             inputResult.value = 1 / numero + ' ' + dadoConvertido+"'s'"
         } else if (numero >= 1024) {
             inputResult.value = numero / 1024 + ' ' + dadoConvertido+"'s'" 
-        } else { "Erro" }
+        } 
     }
-    else if (dadoConverter === 'Byte' && dadoConvertido === 'MegaByte') {
+    else if (dadoConverter == 'Byte' && dadoConvertido == 'MegaByte') {
         if (numero < Math.pow(1024, 2)) {
             inputResult.value = 1 / numero + ' ' + dadoConvertido+"'s'"
         } else if (numero >= Math.pow(1024, 2)) {
             inputResult.value = numero / Math.pow(1024, 2) + ' ' + dadoConvertido+"'s'"
-        } else { "Erro" }
+        } 
     }
-    else if (dadoConverter === 'Byte' && dadoConvertido === 'GigaByte') {
+    else if (dadoConverter == 'Byte' && dadoConvertido == 'GigaByte') {
         if (numero < Math.pow(1024, 3)) {
             inputResult.value = 1 / numero + ' ' + dadoConvertido+"'s'"
         } else if (numero >= Math.pow(1024, 3)) {
             inputResult.value = numero / Math.pow(1024, 3) + ' ' + dadoConvertido+"'s'"
-        } else { "Erro" }
+        } 
     }
-    else if (dadoConverter === 'Byte' && dadoConvertido === 'TeraByte') {
+    else if (dadoConverter == 'Byte' && dadoConvertido == 'TeraByte') {
         if (numero < Math.pow(1024, 4)) {
             inputResult.value = 1 / numero + ' ' + dadoConvertido+"'s'"
         } else if (numero >= Math.pow(1024, 4)) {
             inputResult.value = numero / Math.pow(1024, 4) + ' ' + dadoConvertido+"'s'"
-        } else { "Erro" }
+        } 
 
     }
-    else if (dadoConverter === 'Byte' && dadoConvertido === 'PettaByte') {
+    else if (dadoConverter == 'Byte' && dadoConvertido == 'PettaByte') {
         if (numero < Math.pow(1024, 5)) {
             inputResult.value = 1 / numero + ' ' + dadoConvertido+"'s'"
         } else if (numero >= Math.pow(1024, 5)) {
             numero / Math.pow(1024, 5) + ' ' + dadoConvertido+"'s'"
-        } else { "Erro" }
+        } 
 
     }
-    else if (dadoConverter === 'Byte' && dadoConvertido === 'ExaByte') {
+    else if (dadoConverter == 'Byte' && dadoConvertido == 'ExaByte') {
         if (numero < Math.pow(1024, 6)) {
             inputResult.value = 1 / numero + ' ' + dadoConvertido+"'s'"
         } else if (numero >= Math.pow(1024, 6)) {
             numero / Math.pow(1024, 6) + ' ' + dadoConvertido+"'s'"
-        } else { "Erro" }
+        } 
 
     }
-    else if (dadoConverter === 'Byte' && dadoConvertido === 'ZettaByte') {
+    else if (dadoConverter == 'Byte' && dadoConvertido == 'ZettaByte') {
         if (numero < Math.pow(1024, 7)) {
             inputResult.value = 1 / numero + ' ' + dadoConvertido+"'s'"
         } else if (numero >= Math.pow(1024, 7)) {
             numero / Math.pow(1024, 7) + ' ' + dadoConvertido+"'s'"
-        } else { "Erro" }
+        } 
     }
-    else if (dadoConverter === 'Byte' && dadoConvertido === 'YottaByte') {
+    else if (dadoConverter == 'Byte' && dadoConvertido == 'YottaByte') {
         if (numero < Math.pow(1024, 8)) {
             inputResult.value = 1 / numero + ' ' + dadoConvertido+"'s'"
         } else if (numero >= Math.pow(1024, 8)) {
             numero / Math.pow(1024, 8) + ' ' + dadoConvertido+"'s'"
-        } else { "Erro" }
+        } 
     }
     //KiloByte
-    if (dadoConverter === 'KiloByte' && dadoConvertido === 'Byte') {
+    if (dadoConverter == 'KiloByte' && dadoConvertido == 'Byte') {
         if (numero <= 1) {
             inputResult.value = 1024 + ' ' + dadoConvertido+"'s'"
         }
         else if (numero > 1) {
             inputResult.value = numero * 1024 + ' ' + dadoConvertido+"'s'"
-        } else { "Erro" }
+        } 
     }
-    else if (dadoConverter === 'KiloByte' && dadoConvertido === 'KiloByte') {
+    else if (dadoConverter == 'KiloByte' && dadoConvertido == 'KiloByte') {
         inputResult.value = numero + ' ' + dadoConvertido+"'s'"
     }
-    else if (dadoConverter === 'KiloByte' && dadoConvertido === 'MegaByte') {
+    else if (dadoConverter == 'KiloByte' && dadoConvertido == 'MegaByte') {
         if (numero < 1024) {
             inputResult.value = 1 / numero + ' ' + dadoConvertido+"'s'"
         } else if (numero >= 1024) {
             inputResult.value = numero / 1024
-        } else { "Erro" }
+        } 
 
     }
-    else if (dadoConverter === 'KiloByte' && dadoConvertido === 'GigaByte') {
+    else if (dadoConverter == 'KiloByte' && dadoConvertido == 'GigaByte') {
         if (numero < Math.pow(1024, 2)) {
             inputResult.value = 1 / numero + ' ' + dadoConvertido+"'s'"
         } else if (numero >= Math.pow(1024, 2)) {
             inputResult.value = numero / Math.pow(1024, 2) + ' ' + dadoConvertido+"'s'"
-        } else { "Erro" }
+        } 
 
     }
-    else if (dadoConverter === 'KiloByte' && dadoConvertido === 'TeraByte') {
+    else if (dadoConverter == 'KiloByte' && dadoConvertido == 'TeraByte') {
         if (numero < Math.pow(1024, 3)) {
             inputResult.value = 1 / numero + ' ' + dadoConvertido+"'s'"
         } else if (numero >= Math.pow(1024, 3)) {
             inputResult.value = numero / Math.pow(1024, 3) + ' ' + dadoConvertido+"'s'"
-        } else { "Erro" }
+        } 
 
     }
-    else if (dadoConverter === 'KiloByte' && dadoConvertido === 'PettaByte') {
+    else if (dadoConverter == 'KiloByte' && dadoConvertido == 'PettaByte') {
         if (numero < Math.pow(1024, 4)) {
             inputResult.value = 1 / numero + ' ' + dadoConvertido+"'s'"
         } else if (numero >= Math.pow(1024, 4)) {
             inputResult.value = numero / Math.pow(1024, 4) + ' ' + dadoConvertido+"'s'"
-        } else { "Erro" }
+        } 
     }
-    else if (dadoConverter === 'KiloByte' && dadoConvertido === 'ExaByte') {
+    else if (dadoConverter == 'KiloByte' && dadoConvertido == 'ExaByte') {
         if (numero < Math.pow(1024, 5)) {
             inputResult.value = 1 / numero + ' ' + dadoConvertido+"'s'"
         } else if (numero >= Math.pow(1024, 5)) {
             inputResult.value = numero / Math.pow(1024, 5) + ' ' + dadoConvertido+"'s'"
-        } else { "Erro" }
+        } 
     }
-    else if (dadoConverter === 'KiloByte' && dadoConvertido === 'ZettaByte') {
+    else if (dadoConverter == 'KiloByte' && dadoConvertido == 'ZettaByte') {
         if (numero < Math.pow(1024, 6)) {
             inputResult.value = 1 / numero + ' ' + dadoConvertido+"'s'"
         } else if (numero >= Math.pow(1024, 6)) {
             inputResult.value = numero / Math.pow(1024, 6) + ' ' + dadoConvertido+"'s'"
-        } else { "Erro" }
+        } 
     }
-    else if (dadoConverter === 'KiloByte' && dadoConvertido === 'YottaByte') {
+    else if (dadoConverter == 'KiloByte' && dadoConvertido == 'YottaByte') {
         if (numero < Math.pow(1024, 7)) {
             inputResult.value = 1 / numero + ' ' + dadoConvertido+"'s'"
         } else if (numero >= Math.pow(1024, 7)) {
             inputResult.value = numero / Math.pow(1024, 7) + ' ' + dadoConvertido+"'s'"
-        } else { "Erro" }
+        } 
     }
     //MegaByte
-    if (dadoConverter === 'MegaByte' && dadoConvertido === 'Byte') {
+    if (dadoConverter == 'MegaByte' && dadoConvertido == 'Byte') {
         if (numero <= 1) {
             inputResult.value = Math.pow(1024, 2)+ ' ' + dadoConvertido+"'s'"
         } else if (numero > 1) {
             inputResult.value = numero * Math.pow(1024, 2) + ' ' + dadoConvertido+"'s'"
-        } else { "Erro" }
+        } 
     }
-    else if (dadoConverter === 'MegaByte' && dadoConvertido === 'KiloByte') {
+    else if (dadoConverter == 'MegaByte' && dadoConvertido == 'KiloByte') {
         if (numero <= 1) {
             inputResult.value = 1024 + ' ' + dadoConvertido+"'s'"
         } else if (numero > 1) {
             inputResult.value = numero * 1024 + ' ' + dadoConvertido+"'s'"
-        } else { "Erro" }
+        } 
     }
-    else if (dadoConverter === 'MegaByte' && dadoConvertido === 'MegaByte') {
+    else if (dadoConverter == 'MegaByte' && dadoConvertido == 'MegaByte') {
         inputResult.value = numero + ' ' + dadoConvertido+"'s'"
     }
-    else if (dadoConverter === 'MegaByte' && dadoConvertido === 'GigaByte') {
+    else if (dadoConverter == 'MegaByte' && dadoConvertido == 'GigaByte') {
 
         if (numero < 1024) {
             inputResult.value = 1 / numero + ' ' + dadoConvertido+"'s'"
         } else if (numero >= 1024) {
             inputResult.value = numero / 1024 + ' ' + dadoConvertido+"'s'"
-        } else { "Erro" }
+        } 
     }
-    else if (dadoConverter === 'MegaByte' && dadoConvertido === 'TeraByte') {
+    else if (dadoConverter == 'MegaByte' && dadoConvertido == 'TeraByte') {
         if (numero < Math.pow(1024, 2)) {
             inputResult.value = 1 / numero + ' ' + dadoConvertido+"'s'"
         } else if (numero >= Math.pow(1024, 2)) {
             inputResult.value = numero / Math.pow(1024, 2) + ' ' + dadoConvertido+"'s'"
-        } else { "Erro" }
+        } 
     }
-    else if (dadoConverter === 'MegaByte' && dadoConvertido === 'PettaByte') {
+    else if (dadoConverter == 'MegaByte' && dadoConvertido == 'PettaByte') {
         if (numero < Math.pow(1024, 4)) {
             inputResult.value = 1 / numero + ' ' + dadoConvertido+"'s'"
         } else if (numero >= Math.pow(1024, 4)) {
             inputResult.value = numero / Math.pow(1024, 4) + ' ' + dadoConvertido+"'s'"
-        } else { "Erro" }
+        } 
     }
-    else if (dadoConverter === 'MegaByte' && dadoConvertido === 'ExaByte') {
+    else if (dadoConverter == 'MegaByte' && dadoConvertido == 'ExaByte') {
         if (numero < Math.pow(1024, 4)) {
             inputResult.value = 1 / numero + ' ' + dadoConvertido+"'s'"
         } else if (numero >= Math.pow(1024, 4)) {
             inputResult.value = numero / Math.pow(1024, 4) + ' ' + dadoConvertido+"'s'"
-        } else { "Erro" }
+        } 
     }
-    else if (dadoConverter === 'MegaByte' && dadoConvertido === 'ZettaByte') {
+    else if (dadoConverter == 'MegaByte' && dadoConvertido == 'ZettaByte') {
         if (numero < Math.pow(1024, 5)) {
             inputResult.value = 1 / numero + ' ' + dadoConvertido+"'s'"
         } else if (numero >= Math.pow(1024, 5)) {
             inputResult.value = numero / Math.pow(1024, 5) + ' ' + dadoConvertido+"'s'"
-        } else { "Erro" }
+        } 
     }
-    else if (dadoConverter === 'MegaByte' && dadoConvertido === 'YottaByte') {
+    else if (dadoConverter == 'MegaByte' && dadoConvertido == 'YottaByte') {
         if (numero < Math.pow(1024, 6)) {
             inputResult.value = 1 / numero +' ' + dadoConvertido+"'s'"
         } else if (numero >= Math.pow(1024, 6)) {
             inputResult.value = numero / Math.pow(1024, 6) + ' ' + dadoConvertido+"'s'" + ' ' + dadoConvertido+"'s'"
-        } else { "Erro" }
+        } 
     }
     //GigaByte
-    if (dadoConverter === 'GigaByte' && dadoConvertido === 'Byte') {
+    if (dadoConverter == 'GigaByte' && dadoConvertido == 'Byte') {
         if (numero <= 1) {
             inputResult.value = Math.pow(1024, 3) + ' ' + dadoConvertido+"'s'"
         } else if (numero > 1) {
             inputResult.value = numero * Math.pow(1024, 3) + ' ' + dadoConvertido+"'s'"
-        } else { "Erro" }
+        } 
 
     }
-    else if (dadoConverter === 'GigaByte' && dadoConvertido === 'KiloByte') {
+    else if (dadoConverter == 'GigaByte' && dadoConvertido == 'KiloByte') {
         if (numero <= 1) {
             inputResult.value = Math.pow(1024, 2) + ' ' + dadoConvertido+"'s'"
         } else if (numero > 1) {
             inputResult.value = numero * Math.pow(1024, 2) + ' ' + dadoConvertido+"'s'"
-        } else { "Erro" }
+        } 
     }
-    else if (dadoConverter === 'GigaByte' && dadoConvertido === 'MegaByte') {
+    else if (dadoConverter == 'GigaByte' && dadoConvertido == 'MegaByte') {
         if (numero <= 1) {
             inputResult.value = 1024 + ' ' + dadoConvertido+"'s'"
         } else if (numero > 1) {
             inputResult.value = numero * 1024 + ' ' + dadoConvertido+"'s'"
-        } else { "Erro" }
+        } 
 
     }
-    else if (dadoConverter === 'GigaByte' && dadoConvertido === 'GigaByte') {
+    else if (dadoConverter == 'GigaByte' && dadoConvertido == 'GigaByte') {
         inputResult.value = numero
     }
-    else if (dadoConverter === 'GigaByte' && dadoConvertido === 'TeraByte') {
+    else if (dadoConverter == 'GigaByte' && dadoConvertido == 'TeraByte') {
         if (numero < 1024) {
             inputResult.value = 1 / numero + ' ' + dadoConvertido+"'s'"
         } else if (numero >= 1024) {
             inputResult.value = numero / 1024 + ' ' + dadoConvertido+"'s'"
-        } else { "Erro" }
+        } 
     }
-    else if (dadoConverter === 'GigaByte' && dadoConvertido === 'PettaByte') {
+    else if (dadoConverter == 'GigaByte' && dadoConvertido == 'PettaByte') {
         if (numero < Math.pow(1024, 2)) {
             inputResult.value = 1 / numero + ' ' + dadoConvertido+"'s'"
         } else if (numero >= Math.pow(1024, 2)) {
             inputResult.value = numero / Math.pow(1024, 2) + ' ' + dadoConvertido+"'s'"
-        } else { "Erro" }
+        } 
     }
-    else if (dadoConverter === 'GigaByte' && dadoConvertido === 'ExaByte') {
+    else if (dadoConverter == 'GigaByte' && dadoConvertido == 'ExaByte') {
         if (numero < Math.pow(1024, 3)) {
             inputResult.value = 1 / numero + ' ' + dadoConvertido+"'s'"
         } else if (numero >= Math.pow(1024, 3)) {
             inputResult.value = numero / Math.pow(1024, 3) + ' ' + dadoConvertido+"'s'"
-        } else { "Erro" }
+        } 
     }
-    else if (dadoConverter === 'GigaByte' && dadoConvertido === 'ZettaByte') {
+    else if (dadoConverter == 'GigaByte' && dadoConvertido == 'ZettaByte') {
         if (numero < Math.pow(1024, 4)) {
             inputResult.value = 1 / numero + ' ' + dadoConvertido+"'s'"
         } else if (numero >= Math.pow(1024, 4)) {
             inputResult.value = numero / Math.pow(1024, 4) + ' ' + dadoConvertido+"'s'"
-        } else { "Erro" }
+        } 
     }
-    else if (dadoConverter === 'GigaByte' && dadoConvertido === 'YottaByte') {
+    else if (dadoConverter == 'GigaByte' && dadoConvertido == 'YottaByte') {
         if (numero < Math.pow(1024, 5)) {
             inputResult.value = 1 / numero  + ' ' + dadoConvertido+"'s'"
         } else if (numero >= Math.pow(1024, 5)) {
             inputResult.value = numero / Math.pow(1024, 5) + ' ' + dadoConvertido+"'s'" + ' ' + dadoConvertido+"'s'"
-        } else { "Erro" }
+        } 
 
     }
     //TeraByte
-    if (dadoConverter === 'TeraByte' && dadoConvertido === 'Byte') {
+    if (dadoConverter == 'TeraByte' && dadoConvertido == 'Byte') {
         if (numero <= 1) {
             inputResult.value = Math.pow(1024, 4) + ' ' + dadoConvertido+"'s'"
         } else if (numero > 1) {
             inputResult.value = numero * Math.pow(1024, 4) + ' ' + dadoConvertido+"'s'"
-        } else { "Erro" }
+        } 
 
     }
-    else if (dadoConverter === 'TeraByte' && dadoConvertido === 'KiloByte') {
+    else if (dadoConverter == 'TeraByte' && dadoConvertido == 'KiloByte') {
         if (numero <= 1) {
             inputResult.value = Math.pow(1024, 3) + ' ' + dadoConvertido+"'s'"
         } else if (numero > 1) {
             inputResult.value = numero * Math.pow(1024, 3) + ' ' + dadoConvertido+"'s'"
-        } else { "Erro" }
+        } 
     }
-    else if (dadoConverter === 'TeraByte' && dadoConvertido === 'MegaByte') {
+    else if (dadoConverter == 'TeraByte' && dadoConvertido == 'MegaByte') {
         if (numero <= 1) {
             inputResult.value = Math.pow(1024, 2) + ' ' + dadoConvertido+"'s'"
         } else if (numero > 1) {
             inputResult.value = numero * Math.pow(1024, 2) + ' ' + dadoConvertido+"'s'"
-        } else { "Erro" }
+        } 
     }
-    else if (dadoConverter === 'TeraByte' && dadoConvertido === 'GigaByte') {
+    else if (dadoConverter == 'TeraByte' && dadoConvertido == 'GigaByte') {
         if (numero <= 1) {
             inputResult.value = 1024 + ' ' + dadoConvertido+"'s'"
         } else if (numero > 1) {
             inputResult.value = numero * 1024 + ' ' + dadoConvertido+"'s'"
-        } else { "Erro" }
+        } 
     }
-    else if (dadoConverter === 'TeraByte' && dadoConvertido === 'TeraByte') {
+    else if (dadoConverter == 'TeraByte' && dadoConvertido == 'TeraByte') {
         inputResult.value = numero
     }
-    else if (dadoConverter === 'TeraByte' && dadoConvertido === 'PettaByte') {
+    else if (dadoConverter == 'TeraByte' && dadoConvertido == 'PettaByte') {
         if (numero < 1024) {
             inputResult.value = 1 / numero + ' ' + dadoConvertido+"'s'"
         } else if (numero >= 1024) {
             inputResult.value = numero / 1024 + ' ' + dadoConvertido+"'s'"
-        } else { "Erro" }
+        } 
     }
-    else if (dadoConverter === 'TeraByte' && dadoConvertido === 'ExaByte') {
+    else if (dadoConverter == 'TeraByte' && dadoConvertido == 'ExaByte') {
         if (numero < Math.pow(1024, 2)) {
             inputResult.value = 1 / numero + ' ' + dadoConvertido+"'s'"
         } else if (numero >= Math.pow(1024, 2)) {
             inputResult.value = numero / Math.pow(1024, 2) + ' ' + dadoConvertido+"'s'"
-        } else { "Erro" }
+        } 
 
     }
-    else if (dadoConverter === 'TeraByte' && dadoConvertido === 'ZettaByte') {
+    else if (dadoConverter == 'TeraByte' && dadoConvertido == 'ZettaByte') {
         if (numero < Math.pow(1024, 3)) {
             inputResult.value = 1 / numero + ' ' + dadoConvertido+"'s'"
         } else if (numero >= Math.pow(1024, 3)) {
             inputResult.value = numero / Math.pow(1024, 3) + ' ' + dadoConvertido+"'s'"
-        } else { "Erro" }
+        } 
     }
-    else if (dadoConverter === 'TeraByte' && dadoConvertido === 'YottaByte') {
+    else if (dadoConverter == 'TeraByte' && dadoConvertido == 'YottaByte') {
         if (numero < Math.pow(1024, 4)) {
             inputResult.value = 1 / numero  + ' ' + dadoConvertido+"'s'"
         } else if (numero >= Math.pow(1024, 4)) {
             inputResult.value = numero / Math.pow(1024, 4)  + ' ' + dadoConvertido+"'s'"
-        } else { "Erro" }
+        } 
     }
     //PettaByte
-    if (dadoConverter === 'PettaByte' && dadoConvertido === 'Byte') {
+    if (dadoConverter == 'PettaByte' && dadoConvertido == 'Byte') {
 
         if (numero <= 1) {
             inputResult.value = math.pow(1024, 3) + ' ' + dadoConvertido+"'s'"
@@ -336,28 +340,28 @@ document.getElementById('convert').addEventListener('click', function (ev) {
         else if (numero > 1) {
             inputResult.value = numero * math.pow(1021, 3) + ' ' + dadoConvertido+"'s'"
         }
-        else { "Erro" }
+        
 
     }
-    else if (dadoConverter === 'PettaByte' && dadoConvertido === 'KiloByte') {
+    else if (dadoConverter == 'PettaByte' && dadoConvertido == 'KiloByte') {
         if (numero <= 1) {
             inputResult.value = math.pow(1024, 2) + ' ' + dadoConvertido+"'s'"
         }
         else if (numero > 1) {
             inputResult.value = numero * math.pow(1024, 2) + ' ' + dadoConvertido+"'s'"
         }
-        else { "Erro" }
+        
     }
-    else if (dadoConverter === 'PettaByte' && dadoConvertido === 'MegaByte') {
+    else if (dadoConverter == 'PettaByte' && dadoConvertido == 'MegaByte') {
         if (numero <= 1) {
             inputResult.value = math.pow(1024, 3) + ' ' + dadoConvertido+"'s'"
         }
         else if (numero > 1) {
             inputResult.value = numero * math.pow(1021, 3) + ' ' + dadoConvertido+"'s'"
         }
-        else { "Erro" }
+        
     }
-    else if (dadoConverter === 'PettaByte' && dadoConvertido === 'GigaByte') {
+    else if (dadoConverter == 'PettaByte' && dadoConvertido == 'GigaByte') {
 
         if (numero <= 1) {
             inputResult.value = math.pow(1024, 2) + ' ' + dadoConvertido+"'s'"
@@ -365,94 +369,94 @@ document.getElementById('convert').addEventListener('click', function (ev) {
         else if (numero > 1) {
             inputResult.value = numero * math.pow(1024, 2) + ' ' + dadoConvertido+"'s'"
         }
-        else { "Erro" }
+        
     }
-    else if (dadoConverter === 'PettaByte' && dadoConvertido === 'TeraByte') {
+    else if (dadoConverter == 'PettaByte' && dadoConvertido == 'TeraByte') {
         if (numero <= 1) {
             inputResult.value = 1024 + ' ' + dadoConvertido+"'s'"
         }
         else if (numero > 1) {
             inputResult.value = numero * 1024 + ' ' + dadoConvertido+"'s'"
         }
-        else { "Erro" }
+        
     }
-    else if (dadoConverter === 'PettaByte' && dadoConvertido === 'PettaByte') {
+    else if (dadoConverter == 'PettaByte' && dadoConvertido == 'PettaByte') {
         inputResult.value = numero
     }
-    else if (dadoConverter === 'PettaByte' && dadoConvertido === 'ExaByte') {
+    else if (dadoConverter == 'PettaByte' && dadoConvertido == 'ExaByte') {
         if (numero < 1024) {
             inputResult.value = 1 / numero + ' ' + dadoConvertido+"'s'"
         }
         else if (numeo >= 1024) {
             inputResult.value = numero / 1024 + ' ' + dadoConvertido+"'s'"
         }
-        else { "Erro" }
+        
     }
-    else if (dadoConverter === 'PettaByte' && dadoConvertido === 'ZettaByte') {
+    else if (dadoConverter == 'PettaByte' && dadoConvertido == 'ZettaByte') {
         if (numero < math.pow(1024, 2)) {
             inputResult.value = 1 / numero + ' ' + dadoConvertido+"'s'"
         }
         else if (numeo >= math.pow(1024, 2)) {
             inputResult.value = math.pow(1024, 2) + ' ' + dadoConvertido+"'s'"
         }
-        else { "Erro" }
+        
     }
-    else if (dadoConverter === 'PettaByte' && dadoConvertido === 'YottaByte') {
+    else if (dadoConverter == 'PettaByte' && dadoConvertido == 'YottaByte') {
         if (numero < math.pow(1024, 3)) {
             inputResult.value = 1 / numero  + ' ' + dadoConvertido+"'s'"
         }
         else if (numeo >= math.pow(1024, 3)) {
             inputResult.value = math.pow(1024, 3)  + ' ' + dadoConvertido+"'s'"
         }
-        else { "Erro" }
+        
     }
     //ExaByte
-    if (dadoConverter === 'ExaByte' && dadoConvertido === 'Byte') {
+    if (dadoConverter == 'ExaByte' && dadoConvertido == 'Byte') {
         if (numero <= 1) {
             inputResult.value = math.pow(1024, 6) + ' ' + dadoConvertido+"'s'"
         }
         else if (numero > 1) {
             inputResult.value = numero * math.pow(1024, 6) + ' ' + dadoConvertido+"'s'"
         }
-        else { "Erro" }
+        
     }
-    else if (dadoConverter === 'ExaByte' && dadoConvertido === 'KiloByte') {
+    else if (dadoConverter == 'ExaByte' && dadoConvertido == 'KiloByte') {
         if (numero <= math.pow(1024, 5)) {
             inputResult.value = math.pow(1024, 5) + ' ' + dadoConvertido+"'s'"
         }
         else if (numero > 1) {
             inputResult.value = numero * math.pow(1024, 5) + ' ' + dadoConvertido+"'s'"
         }
-        else { "Erro" }
+        
     }
-    else if (dadoConverter === 'ExaByte' && dadoConvertido === 'MegaByte') {
+    else if (dadoConverter == 'ExaByte' && dadoConvertido == 'MegaByte') {
         if (numero <= 1) {
             inputResult.value = math.pow(1024, 4) + ' ' + dadoConvertido+"'s'"
         }
         else if (inputResult.value > 1) {
             inputResult.value = numero * math.pow(1024, 4) + ' ' + dadoConvertido+"'s'"
         }
-        else { "Erro" }
+        
     }
-    else if (dadoConverter === 'ExaByte' && dadoConvertido === 'GigaByte') {
+    else if (dadoConverter == 'ExaByte' && dadoConvertido == 'GigaByte') {
         if (numero <= 1) {
             inputResult.value = math.pow(1024, 3) + ' ' + dadoConvertido+"'s'"
         }
         else if (inputResult.value > 1) {
             inputResult.value = numero * math.pow(1024, 3) + ' ' + dadoConvertido+"'s'"
         }
-        else { "Erro" }
+        
     }
-    else if (dadoConverter === 'ExaByte' && dadoConvertido === 'TeraByte') {
+    else if (dadoConverter == 'ExaByte' && dadoConvertido == 'TeraByte') {
         if (numero <= 1) {
             inputResult.value = math.pow(1024, 2) + ' ' + dadoConvertido+"'s'"
         }
         else if (numero > 1) {
             inputResult.value = numero * math.pow(1024, 2) + ' ' + dadoConvertido+"'s'"
         }
-        else { "Erro" }
+        
     }
-    else if (dadoConverter === 'ExaByte' && dadoConvertido === 'PettaByte') {
+    else if (dadoConverter == 'ExaByte' && dadoConvertido == 'PettaByte') {
 
         if (numero <= 1) {
             inputResult.value = 1024 + ' ' + dadoConvertido+"'s'"
@@ -460,32 +464,32 @@ document.getElementById('convert').addEventListener('click', function (ev) {
         else if (numero > 1) {
             inputResult.value = numero * 1024 + ' ' + dadoConvertido+"'s'"
         }
-        else { "Erro" }
+        
     }
-    else if (dadoConverter === 'ExaByte' && dadoConvertido === 'ExaByte') {
+    else if (dadoConverter == 'ExaByte' && dadoConvertido == 'ExaByte') {
         inputResult.value = numero
     }
-    else if (dadoConverter === 'ExaByte' && dadoConvertido === 'ZettaByte') {
+    else if (dadoConverter == 'ExaByte' && dadoConvertido == 'ZettaByte') {
         if (numero < 1024) {
             inputResult.value = 1 / numero + ' ' + dadoConvertido+"'s'"
         }
         else if (numeo >= 1024) {
             inputResult.value = numero / 1024 + ' ' + dadoConvertido+"'s'"
         }
-        else { "Erro" }
+        
 
     }
-    else if (dadoConverter === 'ExaByte' && dadoConvertido === 'YottaByte') {
+    else if (dadoConverter == 'ExaByte' && dadoConvertido == 'YottaByte') {
         if (numero < math.pow(1024, 2)) {
             inputResult.value = 1 / numero  + ' ' + dadoConvertido+"'s'"
         }
         else if (numeo >= math.pow(1024, 2)) {
             inputResult.value = numero / math.pow(1024, 2)  + ' ' + dadoConvertido+"'s'"
         }
-        else { "Erro" }
+        
     }
     //ZettaByte
-    if (dadoConverter === 'ZettaByte' && dadoConvertido === 'Byte') {
+    if (dadoConverter == 'ZettaByte' && dadoConvertido == 'Byte') {
         if (numero <= 1) {
             inputResult.value = math.pow(1024, 7) + ' ' + dadoConvertido+"'s'"
         }
@@ -494,7 +498,7 @@ document.getElementById('convert').addEventListener('click', function (ev) {
         }
         else{"Erro"}
     }
-    else if (dadoConverter === 'ZettaByte' && dadoConvertido === 'KiloByte') {
+    else if (dadoConverter == 'ZettaByte' && dadoConvertido == 'KiloByte') {
         if (numero <= 1) {
             inputResult.value = math.pow(1024, 6) + ' ' + dadoConvertido+"'s'"
         }
@@ -503,7 +507,7 @@ document.getElementById('convert').addEventListener('click', function (ev) {
         }
         else{"Erro"}
     }
-    else if (dadoConverter === 'ZettaByte' && dadoConvertido === 'MegaByte') {
+    else if (dadoConverter == 'ZettaByte' && dadoConvertido == 'MegaByte') {
         if (numero <= 1) {
             inputResult.value = math.pow(1024, 5) + ' ' + dadoConvertido+"'s'"
         }
@@ -512,7 +516,7 @@ document.getElementById('convert').addEventListener('click', function (ev) {
         }
         else{"Erro"}
     }
-    else if (dadoConverter === 'ZettaByte' && dadoConvertido === 'GigaByte') {
+    else if (dadoConverter == 'ZettaByte' && dadoConvertido == 'GigaByte') {
         if (numero <= 1) {
             inputResult.value = math.pow(1024, 4) + ' ' + dadoConvertido+"'s'"
         }
@@ -521,7 +525,7 @@ document.getElementById('convert').addEventListener('click', function (ev) {
         }
         else{"Erro"}
     }
-    else if (dadoConverter === 'ZettaByte' && dadoConvertido === 'TeraByte') {
+    else if (dadoConverter == 'ZettaByte' && dadoConvertido == 'TeraByte') {
         if (numero >= 1) {
             inputResult.value = math.pow(1024, 3) + ' ' + dadoConvertido+"'s'"
         }
@@ -530,7 +534,7 @@ document.getElementById('convert').addEventListener('click', function (ev) {
         }
         else{"Erro"}
     }
-    else if (dadoConverter === 'ZettaByte' && dadoConvertido === 'PettaByte') {
+    else if (dadoConverter == 'ZettaByte' && dadoConvertido == 'PettaByte') {
         if (numero <= 1) {
             inputResult.value = math.pow(1024, 2) + ' ' + dadoConvertido+"'s'"
         }
@@ -539,7 +543,7 @@ document.getElementById('convert').addEventListener('click', function (ev) {
         }
         else{"Erro"}
     }
-    else if (dadoConverter === 'ZettaByte' && dadoConvertido === 'ExaByte') {
+    else if (dadoConverter == 'ZettaByte' && dadoConvertido == 'ExaByte') {
         if (numero <= 1) {
             inputResult.value = 1024 + ' ' + dadoConvertido+"'s'"
         }
@@ -548,10 +552,10 @@ document.getElementById('convert').addEventListener('click', function (ev) {
         }
         else{"Erro"}
     }
-    else if (dadoConverter === 'ZettaByte' && dadoConvertido === 'ZettaByte') {
+    else if (dadoConverter == 'ZettaByte' && dadoConvertido == 'ZettaByte') {
         inputResult.value = numero + ' ' + dadoConvertido+"'s'"
     }
-    else if (dadoConverter === 'ZettaByte' && dadoConvertido === 'YottaByte') {
+    else if (dadoConverter == 'ZettaByte' && dadoConvertido == 'YottaByte') {
         if (numero < 1024) {
             inputResult.value = 1 / numero + ' ' + dadoConvertido+"'s'"
         }
@@ -561,62 +565,62 @@ document.getElementById('convert').addEventListener('click', function (ev) {
         else{"Erro"}
     }
     //YottaByte
-    if (dadoConverter === 'YottaByte' && dadoConvertido === 'Byte') {
+    if (dadoConverter == 'YottaByte' && dadoConvertido == 'Byte') {
         if (numero <= 1) {
             inputResult.value = math.pow(1024, 8) + ' ' + dadoConvertido+"'s'"
         }
         else if (numero <= 1) {
             inputResult.value = numero * math.pow(1024, 8) + ' ' + dadoConvertido+"'s'"
         }
-        else { "Erro" }
+        
     }
-    else if (dadoConverter === 'YottaByte' && dadoConvertido === 'KiloByte') {
+    else if (dadoConverter == 'YottaByte' && dadoConvertido == 'KiloByte') {
         if (numero <= 1) {
             inputResult.value = math.pow(1024, 7) + ' ' + dadoConvertido+"'s'"
         }
         else if (numero > 1) {
             inputResult.value = numero * math.pow(1024, 7) + ' ' + dadoConvertido+"'s'"
         }
-        else { "Erro" }
+        
     }
-    else if (dadoConverter === 'YottaByte' && dadoConvertido === 'MegaByte') {
+    else if (dadoConverter == 'YottaByte' && dadoConvertido == 'MegaByte') {
         if (numero <= 1) {
             inputResult.value =  math.pow(1024, 6) + ' ' + dadoConvertido+"'s'"
         }
         else if (numero > 1) {
             inputResult.value = numero * math.pow(1024, 6) + ' ' + dadoConvertido+"'s'"
         }
-        else { "Erro" }
+        
 
     }
-    else if (dadoConverter === 'YottaByte' && dadoConvertido === 'GigaByte') {
+    else if (dadoConverter == 'YottaByte' && dadoConvertido == 'GigaByte') {
         if (numero <= 1) {
             inputResult.value = math.pow(1024, 5) + ' ' + dadoConvertido+"'s'"
         }
         else if (numero > 1) {
             inputResult.value = numero * math.pow(1024, 5) + ' ' + dadoConvertido+"'s'"
         }
-        else { "Erro" }
+        
     }
-    else if (dadoConverter === 'YottaByte' && dadoConvertido === 'TeraByte') {
+    else if (dadoConverter == 'YottaByte' && dadoConvertido == 'TeraByte') {
         if (numero <= 1) {
             inputResult.value = math.pow(1024, 4) + ' ' + dadoConvertido+"'s'"
         }
         else if (inputResult.value > 1) {
             inputResult.value = numero * math.pow(1024, 4) + ' ' + dadoConvertido+"'s'"
         }
-        else { "Erro" }
+        
     }
-    else if (dadoConverter === 'YottaByte' && dadoConvertido === 'PettaByte') {
+    else if (dadoConverter == 'YottaByte' && dadoConvertido == 'PettaByte') {
         if (numero >= 1) {
             inputResult.value = math.pow(1024, 3) + ' ' + dadoConvertido+"'s'"
         }
         else if (numero > 1) {
             inputResult.value * math.pow(1021, 3) + ' ' + dadoConvertido+"'s'"
         }
-        else { "Erro" }
+        
     }
-    else if (dadoConverter === 'YottaByte' && dadoConvertido === 'ExaByte') {
+    else if (dadoConverter == 'YottaByte' && dadoConvertido == 'ExaByte') {
         if (numero <= 1) {
             inputResult.value = math.pow(1024, 2) + ' ' + dadoConvertido+"'s'"
         }
@@ -625,18 +629,18 @@ document.getElementById('convert').addEventListener('click', function (ev) {
         }
         else { 'Erro' }
     }
-    else if (dadoConverter === 'YottaByte' && dadoConvertido === 'ZettaByte') {
+    else if (dadoConverter == 'YottaByte' && dadoConvertido == 'ZettaByte') {
         if (numero <= 1) {
             inputResult.value = 1024 + ' ' + dadoConvertido+"'s'"
         }
         else if (numero > 1) {
             inputResult.value = numero * 1024 + ' ' + dadoConvertido+"'s'"
         }
-        else { "Erro" }
+        
 
 
     }
-    else if (dadoConverter === 'YottaByte' && dadoConvertido === 'YottaByte') {
+    else if (dadoConverter == 'YottaByte' && dadoConvertido == 'YottaByte') {
         inputResult.value =  numero + ' ' + dadoConvertido+"'s'"
     }
 })
