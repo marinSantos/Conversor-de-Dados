@@ -8,7 +8,9 @@ const converter = document.querySelectorAll('.converter')
 const convertido = document.querySelectorAll('.convertido')
 
 
+
 document.getElementById('convert').addEventListener('click', function (ev) {
+    
     ev.preventDefault()
     const numero = input.value
     
@@ -639,6 +641,8 @@ document.getElementById('convert').addEventListener('click', function (ev) {
     }
 })
 
+
+
 converter.forEach(function (item) {
     item.addEventListener('click', function (ev) {
         ev.preventDefault()
@@ -668,5 +672,4 @@ function onlynumber(evt) {
        if(theEvent.preventDefault) theEvent.preventDefault();
     }
  }
-
 
