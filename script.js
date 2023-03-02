@@ -8,6 +8,8 @@ const converter = document.querySelectorAll('.converter')
 const convertido = document.querySelectorAll('.convertido')
 
 
+
+
 document.getElementById('convert').addEventListener('click', function (ev) {
     ev.preventDefault()
     const numero = input.value
@@ -645,6 +647,127 @@ converter.forEach(function (item) {
         dadoConverter = this.id
         console.log(dadoConverter)
         inputResult.value = dadoConverter + ' >>> ' + dadoConvertido
+        if(item == converter[0]){
+            item.setAttribute("style", "filter:brightness(0.6);")
+            converter[1].setAttribute("style", "filter: brightness(1);")
+            converter[2].setAttribute("style", "filter: brightness(1);")
+            converter[3].setAttribute("style", "filter: brightness(1);")
+            converter[4].setAttribute("style", "filter: brightness(1);")
+            converter[5].setAttribute("style", "filter: brightness(1);")
+            converter[6].setAttribute("style", "filter: brightness(1);")
+            converter[7].setAttribute("style", "filter: brightness(1);")
+            converter[8].setAttribute("style", "filter: brightness(1);")
+            converter[9].setAttribute("style", "filter: brightness(1);")
+        }
+        if(item == converter[1]){
+            item.setAttribute("style", "filter:brightness(0.6);")
+            converter[0].setAttribute("style", "filter: brightness(1);")
+            converter[2].setAttribute("style", "filter: brightness(1);")
+            converter[3].setAttribute("style", "filter: brightness(1);")
+            converter[4].setAttribute("style", "filter: brightness(1);")
+            converter[5].setAttribute("style", "filter: brightness(1);")
+            converter[6].setAttribute("style", "filter: brightness(1);")
+            converter[7].setAttribute("style", "filter: brightness(1);")
+            converter[8].setAttribute("style", "filter: brightness(1);")
+            converter[9].setAttribute("style", "filter: brightness(1);")
+        }
+        if(item == converter[2]){
+            item.setAttribute("style", "filter:brightness(0.6);")
+            converter[1].setAttribute("style", "filter: brightness(1);")
+            converter[0].setAttribute("style", "filter: brightness(1);")
+            converter[3].setAttribute("style", "filter: brightness(1);")
+            converter[4].setAttribute("style", "filter: brightness(1);")
+            converter[5].setAttribute("style", "filter: brightness(1);")
+            converter[6].setAttribute("style", "filter: brightness(1);")
+            converter[7].setAttribute("style", "filter: brightness(1);")
+            converter[8].setAttribute("style", "filter: brightness(1);")
+            converter[9].setAttribute("style", "filter: brightness(1);")
+        }
+        if(item == converter[3]){
+            item.setAttribute("style", "filter:brightness(0.6);")
+            converter[1].setAttribute("style", "filter: brightness(1);")
+            converter[2].setAttribute("style", "filter: brightness(1);")
+            converter[0].setAttribute("style", "filter: brightness(1);")
+            converter[4].setAttribute("style", "filter: brightness(1);")
+            converter[5].setAttribute("style", "filter: brightness(1);")
+            converter[6].setAttribute("style", "filter: brightness(1);")
+            converter[7].setAttribute("style", "filter: brightness(1);")
+            converter[8].setAttribute("style", "filter: brightness(1);")
+            converter[9].setAttribute("style", "filter: brightness(1);")
+        }
+        if(item == converter[4]){
+            item.setAttribute("style", "filter:brightness(0.6);")
+            converter[1].setAttribute("style", "filter: brightness(1);")
+            converter[2].setAttribute("style", "filter: brightness(1);")
+            converter[3].setAttribute("style", "filter: brightness(1);")
+            converter[0].setAttribute("style", "filter: brightness(1);")
+            converter[5].setAttribute("style", "filter: brightness(1);")
+            converter[6].setAttribute("style", "filter: brightness(1);")
+            converter[7].setAttribute("style", "filter: brightness(1);")
+            converter[8].setAttribute("style", "filter: brightness(1);")
+            converter[9].setAttribute("style", "filter: brightness(1);")
+        }
+        if(item == converter[5]){
+            item.setAttribute("style", "filter:brightness(0.6);")
+            converter[1].setAttribute("style", "filter: brightness(1);")
+            converter[2].setAttribute("style", "filter: brightness(1);")
+            converter[3].setAttribute("style", "filter: brightness(1);")
+            converter[4].setAttribute("style", "filter: brightness(1);")
+            converter[0].setAttribute("style", "filter: brightness(1);")
+            converter[6].setAttribute("style", "filter: brightness(1);")
+            converter[7].setAttribute("style", "filter: brightness(1);")
+            converter[8].setAttribute("style", "filter: brightness(1);")
+            converter[9].setAttribute("style", "filter: brightness(1);")
+        }
+        if(item == converter[6]){
+            item.setAttribute("style", "filter:brightness(0.6);")
+            converter[1].setAttribute("style", "filter: brightness(1);")
+            converter[2].setAttribute("style", "filter: brightness(1);")
+            converter[3].setAttribute("style", "filter: brightness(1);")
+            converter[4].setAttribute("style", "filter: brightness(1);")
+            converter[5].setAttribute("style", "filter: brightness(1);")
+            converter[0].setAttribute("style", "filter: brightness(1);")
+            converter[7].setAttribute("style", "filter: brightness(1);")
+            converter[8].setAttribute("style", "filter: brightness(1);")
+            converter[9].setAttribute("style", "filter: brightness(1);")
+        }
+        if(item == converter[7]){
+            item.setAttribute("style", "filter:brightness(0.6);")
+            converter[1].setAttribute("style", "filter: brightness(1);")
+            converter[2].setAttribute("style", "filter: brightness(1);")
+            converter[3].setAttribute("style", "filter: brightness(1);")
+            converter[4].setAttribute("style", "filter: brightness(1);")
+            converter[5].setAttribute("style", "filter: brightness(1);")
+            converter[6].setAttribute("style", "filter: brightness(1);")
+            converter[0].setAttribute("style", "filter: brightness(1);")
+            converter[8].setAttribute("style", "filter: brightness(1);")
+            converter[9].setAttribute("style", "filter: brightness(1);")
+        }
+        if(item == converter[8]){
+            item.setAttribute("style", "filter:brightness(0.6);")
+            converter[1].setAttribute("style", "filter: brightness(1);")
+            converter[2].setAttribute("style", "filter: brightness(1);")
+            converter[3].setAttribute("style", "filter: brightness(1);")
+            converter[4].setAttribute("style", "filter: brightness(1);")
+            converter[5].setAttribute("style", "filter: brightness(1);")
+            converter[6].setAttribute("style", "filter: brightness(1);")
+            converter[7].setAttribute("style", "filter: brightness(1);")
+            converter[0].setAttribute("style", "filter: brightness(1);")
+            converter[9].setAttribute("style", "filter: brightness(1);")
+        }
+        if(item == converter[9]){
+            item.setAttribute("style", "filter:brightness(0.6);")
+            converter[1].setAttribute("style", "filter: brightness(1);")
+            converter[2].setAttribute("style", "filter: brightness(1);")
+            converter[3].setAttribute("style", "filter: brightness(1);")
+            converter[4].setAttribute("style", "filter: brightness(1);")
+            converter[5].setAttribute("style", "filter: brightness(1);")
+            converter[6].setAttribute("style", "filter: brightness(1);")
+            converter[7].setAttribute("style", "filter: brightness(1);")
+            converter[8].setAttribute("style", "filter: brightness(1);")
+            converter[0].setAttribute("style", "filter: brightness(1);")
+        }
+    
     })
 })
 
@@ -654,6 +777,126 @@ convertido.forEach(function (item) {
         dadoConvertido = this.name
         console.log(dadoConvertido)
         inputResult.value = dadoConverter + ' >>> ' + dadoConvertido
+        if(item == convertido[0]){
+            item.setAttribute("style", "filter:brightness(0.6);")
+            convertido[1].setAttribute("style", "filter: brightness(1);")
+            convertido[2].setAttribute("style", "filter: brightness(1);")
+            convertido[3].setAttribute("style", "filter: brightness(1);")
+            convertido[4].setAttribute("style", "filter: brightness(1);")
+            convertido[5].setAttribute("style", "filter: brightness(1);")
+            convertido[6].setAttribute("style", "filter: brightness(1);")
+            convertido[7].setAttribute("style", "filter: brightness(1);")
+            convertido[8].setAttribute("style", "filter: brightness(1);")
+            convertido[9].setAttribute("style", "filter: brightness(1);")
+        }
+        if(item == convertido[1]){
+            item.setAttribute("style", "filter:brightness(0.6);")
+            convertido[0].setAttribute("style", "filter: brightness(1);")
+            convertido[2].setAttribute("style", "filter: brightness(1);")
+            convertido[3].setAttribute("style", "filter: brightness(1);")
+            convertido[4].setAttribute("style", "filter: brightness(1);")
+            convertido[5].setAttribute("style", "filter: brightness(1);")
+            convertido[6].setAttribute("style", "filter: brightness(1);")
+            convertido[7].setAttribute("style", "filter: brightness(1);")
+            convertido[8].setAttribute("style", "filter: brightness(1);")
+            convertido[9].setAttribute("style", "filter: brightness(1);")
+        }
+        if(item == convertido[2]){
+            item.setAttribute("style", "filter:brightness(0.6);")
+            convertido[1].setAttribute("style", "filter: brightness(1);")
+            convertido[0].setAttribute("style", "filter: brightness(1);")
+            convertido[3].setAttribute("style", "filter: brightness(1);")
+            convertido[4].setAttribute("style", "filter: brightness(1);")
+            convertido[5].setAttribute("style", "filter: brightness(1);")
+            convertido[6].setAttribute("style", "filter: brightness(1);")
+            convertido[7].setAttribute("style", "filter: brightness(1);")
+            convertido[8].setAttribute("style", "filter: brightness(1);")
+            convertido[9].setAttribute("style", "filter: brightness(1);")
+        }
+        if(item == convertido[3]){
+            item.setAttribute("style", "filter:brightness(0.6);")
+            convertido[1].setAttribute("style", "filter: brightness(1);")
+            convertido[2].setAttribute("style", "filter: brightness(1);")
+            convertido[0].setAttribute("style", "filter: brightness(1);")
+            convertido[4].setAttribute("style", "filter: brightness(1);")
+            convertido[5].setAttribute("style", "filter: brightness(1);")
+            convertido[6].setAttribute("style", "filter: brightness(1);")
+            convertido[7].setAttribute("style", "filter: brightness(1);")
+            convertido[8].setAttribute("style", "filter: brightness(1);")
+            convertido[9].setAttribute("style", "filter: brightness(1);")
+        }
+        if(item == convertido[4]){
+            item.setAttribute("style", "filter:brightness(0.6);")
+            convertido[1].setAttribute("style", "filter: brightness(1);")
+            convertido[2].setAttribute("style", "filter: brightness(1);")
+            convertido[3].setAttribute("style", "filter: brightness(1);")
+            convertido[0].setAttribute("style", "filter: brightness(1);")
+            convertido[5].setAttribute("style", "filter: brightness(1);")
+            convertido[6].setAttribute("style", "filter: brightness(1);")
+            convertido[7].setAttribute("style", "filter: brightness(1);")
+            convertido[8].setAttribute("style", "filter: brightness(1);")
+            convertido[9].setAttribute("style", "filter: brightness(1);")
+        }
+        if(item == convertido[5]){
+            item.setAttribute("style", "filter:brightness(0.6);")
+            convertido[1].setAttribute("style", "filter: brightness(1);")
+            convertido[2].setAttribute("style", "filter: brightness(1);")
+            convertido[3].setAttribute("style", "filter: brightness(1);")
+            convertido[4].setAttribute("style", "filter: brightness(1);")
+            convertido[0].setAttribute("style", "filter: brightness(1);")
+            convertido[6].setAttribute("style", "filter: brightness(1);")
+            convertido[7].setAttribute("style", "filter: brightness(1);")
+            convertido[8].setAttribute("style", "filter: brightness(1);")
+            convertido[9].setAttribute("style", "filter: brightness(1);")
+        }
+        if(item == convertido[6]){
+            item.setAttribute("style", "filter:brightness(0.6);")
+            convertido[1].setAttribute("style", "filter: brightness(1);")
+            convertido[2].setAttribute("style", "filter: brightness(1);")
+            convertido[3].setAttribute("style", "filter: brightness(1);")
+            convertido[4].setAttribute("style", "filter: brightness(1);")
+            convertido[5].setAttribute("style", "filter: brightness(1);")
+            convertido[0].setAttribute("style", "filter: brightness(1);")
+            convertido[7].setAttribute("style", "filter: brightness(1);")
+            convertido[8].setAttribute("style", "filter: brightness(1);")
+            convertido[9].setAttribute("style", "filter: brightness(1);")
+        }
+        if(item == convertido[7]){
+            item.setAttribute("style", "filter:brightness(0.6);")
+            convertido[1].setAttribute("style", "filter: brightness(1);")
+            convertido[2].setAttribute("style", "filter: brightness(1);")
+            convertido[3].setAttribute("style", "filter: brightness(1);")
+            convertido[4].setAttribute("style", "filter: brightness(1);")
+            convertido[5].setAttribute("style", "filter: brightness(1);")
+            convertido[6].setAttribute("style", "filter: brightness(1);")
+            convertido[0].setAttribute("style", "filter: brightness(1);")
+            convertido[8].setAttribute("style", "filter: brightness(1);")
+            convertido[9].setAttribute("style", "filter: brightness(1);")
+        }
+        if(item == convertido[8]){
+            item.setAttribute("style", "filter:brightness(0.6);")
+            convertido[1].setAttribute("style", "filter: brightness(1);")
+            convertido[2].setAttribute("style", "filter: brightness(1);")
+            convertido[3].setAttribute("style", "filter: brightness(1);")
+            convertido[4].setAttribute("style", "filter: brightness(1);")
+            convertido[5].setAttribute("style", "filter: brightness(1);")
+            convertido[6].setAttribute("style", "filter: brightness(1);")
+            convertido[7].setAttribute("style", "filter: brightness(1);")
+            convertido[0].setAttribute("style", "filter: brightness(1);")
+            convertido[9].setAttribute("style", "filter: brightness(1);")
+        }
+        if(item == convertido[9]){
+            item.setAttribute("style", "filter:brightness(0.6);")
+            convertido[1].setAttribute("style", "filter: brightness(1);")
+            convertido[2].setAttribute("style", "filter: brightness(1);")
+            convertido[3].setAttribute("style", "filter: brightness(1);")
+            convertido[4].setAttribute("style", "filter: brightness(1);")
+            convertido[5].setAttribute("style", "filter: brightness(1);")
+            convertido[6].setAttribute("style", "filter: brightness(1);")
+            convertido[7].setAttribute("style", "filter: brightness(1);")
+            convertido[8].setAttribute("style", "filter: brightness(1);")
+            convertido[0].setAttribute("style", "filter: brightness(1);")
+        }
     })
 })
 
