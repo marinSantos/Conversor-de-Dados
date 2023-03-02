@@ -35,8 +35,8 @@ h3 {
 }
 
 button {
-    background-color: white;
-    color: black;
+    background-color: #ffffff;
+    color: #000000;
     border-radius: 20px;
     height: 30px;
     cursor: pointer;
@@ -45,18 +45,15 @@ button {
 }
 
 button:hover {
-    filter: brightness(0.6);
+    filter: brightness(1);
 
 }
 
-.atual{
-    filter: brightness(0.6) !important;
-}
 
 
 input {
     background-color: white;
-    color: black;
+    color: #000000;
     border-radius: .25rem;
     padding: 7px;
     width: 400px;
