@@ -19,7 +19,7 @@ main {
     align-items: center;
     padding: 15px 20px 40px 20px;
     position: absolute;
-    top: 50%;
+    top: 48%;
     left: 50%;
     margin-right: -50%;
     transform: translate(-50%, -50%);
@@ -28,7 +28,6 @@ main {
 
 h1 {
     color: white;
-    margin-top: 3%;
 }
 
 h3 {
